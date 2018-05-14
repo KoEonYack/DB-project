@@ -13,13 +13,14 @@
     <body>
     <div class="container"><br><br>
         <h2>SQL Table</h2>
-        <p>When the user presses the "current screening" button, the movies currently being screened are displayed. <br>
-        SELECT * FROM movie_list WHERE release_date = 2018;
+        <p>When the user presses the "Expected Release" button, movies scheduled for release are displayed.
+        <br>
+        SELECT * FROM movie_list WHERE release_date > 2018;
         </p>
 
         <?php
             require('db_connect.php');
-            $result = mysqli_query($conn, "SELECT * FROM movie_list WHERE release_date = 2018");
+            $result = mysqli_query($conn, "SELECT * FROM movie_list WHERE release_date > 2018");
 
            echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
            # echo "<table class='table table-hover' >";
