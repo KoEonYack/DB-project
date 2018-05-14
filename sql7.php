@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
     <body>
-    <div class="container">
+    <div class="container"><br><br>
         <h2>SQL Table</h2>
         <p>When the user presses the "Expected Release" button, movies scheduled for release are displayed.
         <br>
