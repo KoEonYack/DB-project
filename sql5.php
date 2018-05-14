@@ -13,24 +13,26 @@
     <body>
     <div class="container">
         <h2>SQL Table</h2>
-        <p>SELECT * FROM joyful_trop WHERE board </p>            
-        <?php
+        <p>When the user presses the "current screening" button, the movies currently being screened are displayed. <br>
+        SELECT * FROM movie_list WHERE release_date = 2018;
+        </p>
 
+        <?php
             require('db_connect.php');
-            $result = mysqli_query($conn, "SELECT * FROM movie_list ");
+            $result = mysqli_query($conn, "SELECT * FROM movie_list WHERE release_date = 2018");
 
            echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
            # echo "<table class='table table-hover' >";
 
-            echo "<tr><th style='text-align:center;'>요청자 ID</th><th style='text-align:center;'>글 제목</th><th style='text-align:center;'>요청 내용</th></tr>";
+            echo "<tr><th style='text-align:center;'>Movie ID</th><th style='text-align:center;'>Movie Title</th><th style='text-align:center;'>English Title</th><th style='text-align:center;'>Year</th>    </tr>";
 
             while( $row = mysqli_fetch_array($result) ){  
                 $id = $row["movie_id"]; 
                 $title = $row["movie_name"];
                 $content = $row["english_name"];
-
+                $date = $row["release_date"];
                 #echo "<tr><td><div>".$id."</div></td><td>".$title."</td><td  style='padding-right:200px;'>".$content."</td></tr>";
-                echo "<tr>  <td>".$id."</td>  <td>".$title."</td>  <td>".$content."</td>   </tr>";
+                echo "<tr>  <td>".$id."</td>  <td>".$title."</td>  <td>".$content."</td>  <td>".$date."</td>  </tr>";
             }
             echo "</table>";
 
