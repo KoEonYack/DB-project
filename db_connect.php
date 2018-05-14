@@ -2,8 +2,8 @@
     #=======================================================================
     $db_host = "localhost";
     $db_user = "root";
-    $db_passwd = "gritYCDA";
-    $db_name = "watcha_project";
+    $db_passwd = "*****";
+    $db_name = "db_project";
     $conn = mysqli_connect($db_host, $db_user, $db_passwd, $db_name);
 
     if (mysqli_connect_errno($conn)){
@@ -12,5 +12,4 @@
         echo "connect DB_1     <br>";
     }
     #=======================================================================
-
 ?>
