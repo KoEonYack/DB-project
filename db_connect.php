@@ -2,8 +2,8 @@
     #=======================================================================
     $db_host = "localhost";
     $db_user = "root";
-    $db_passwd = "est2678s";
-    $db_name = "db_project";
+    $db_passwd = "gritYCDA";
+    $db_name = "watcha_project";
     $conn = mysqli_connect($db_host, $db_user, $db_passwd, $db_name);
 
     if (mysqli_connect_errno($conn)){
