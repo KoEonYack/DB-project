@@ -13,24 +13,22 @@
     <!-- <link rel="stylesheet" href="../css/mySignInForm.css" /> -->
 </head>
 <body>
-<div class="container">
-
+<div id="container">
     <div id="wrap">
         <div id="container"><br><br>
-            <h1 class="title">왓차에 오신 것을 환영합니다.</h1><hr><br>
+            <h1 class="title">왓차에 오신 것을 환영합니다.</h1>
+            <h1> 로그인: SELECT * FROM user_list WHERE nick_name = '{$memberId}' AND user_password = '{$memberPw}'</h1>
+            <hr><br>
             <form name="singIn" action="./signIn.php" method="post" onsubmit="return checkSubmit()">
-                
                 <div class="line">
-                    
                     <div class="inputArea">
                         <p>아이디 
-                        <input type="text" name="memberId" class="form-control" placeholder="아이디를 입력해주세요" /> </p>
+                      <input type="text" name="memberId" class="form-control" placeholder="아이디를 입력해주세요" /> </p>
                     </div>
                 </div>
 
 
                 <div class="line">
-                    
                     <div class="inputArea">
                         <p>비밀번호 <input type="password" name="memberPw"  class="form-control" placeholder="비밀번호를 입력해주세요"  /> </p>
                     </div>
@@ -39,7 +37,6 @@
                 <div class="line">
                     <input type="submit" value="로그인" class="form-control" />
                 </div>
-        
             </form>
             <br><a href="./signUpForm.php"><button type="button" class="btn btn-primary">회원가입 하기</button></a>
         </div>
