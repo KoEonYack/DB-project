@@ -11,6 +11,7 @@
 <div id="wrap">
     <div id="container">
         <h1 class="title">어서오세요.</h1>
+        <h1> 로그인: SELECT * FROM user_list WHERE nick_name = '{$memberId}' AND user_password = '{$memberPw}'</h1>
         <form name="singIn" action="./signIn.php" method="post" onsubmit="return checkSubmit()">
             
             <div class="line">
