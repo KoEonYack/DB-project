@@ -9,11 +9,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>     
 </head>
 <body>
-    <h1><a href="../button.html">메인으로</a></h1>
-    <?php
-      require('director_info_query.php');
-      directorList();
-      directorClick();
-    ?>
+    <div class="container"><br><br>
+        <?php
+            require('director_info_query.php');
+            directorList();
+            directorClick();
+        ?>
+        <br><br><a href="../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a>
+    </div>
 </body>
 </html>
