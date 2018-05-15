@@ -5,18 +5,20 @@
       global $conn;
       echo '<br><span style="font-size:35px"><장르별로 보기></span><br>';
       $genre_sql = "SELECT * FROM genre_list";
-      echo '<h1>'.$genre_sql.'</h1>';
+      echo '<h4>'.$genre_sql.'</h4><hr>';
       $genre_result = mysqli_query($conn, $genre_sql);
       $n = 0;
+      echo "<p>";
       while($genre = mysqli_fetch_array($genre_result)){
-        echo '<button type="button"><span style="font-size:20px"><a href="movie_genre.php?id='
+        echo '<button type="button" class="btn btn-default"><a href="movie_genre.php?id='
         .$genre["genre_id"].'"style="text-decoration:none; color:black;">'
-        .$genre["genre_name"].'</a></span></button>&nbsp;&nbsp;&nbsp;';
+        .$genre["genre_name"].'</a></button>';
+        echo '  ';
         $n++;
-        if($n%5===0) echo '<br><br>';
+        if($n%5===0) echo '<p></p>';
       }
 
-      echo "<br>-------------------------------------------------------------<br>";
+      echo "<hr>";
     }
 
     function genreClick(){
@@ -31,16 +33,18 @@
         ON u.movie_id=m.movie_id
         WHERE u.userlist_id=1";
 
-        echo '<h1>'.$movie_genre_sql.'</h1>';
+        echo '<h4>'.$movie_genre_sql.'</h4>';
 
         $movie_genre_result = mysqli_query($conn, $movie_genre_sql);
         while($movie_genre = mysqli_fetch_array($movie_genre_result)){
           if($movie_genre['genre_id']===$_GET['id']){ 
             $movie_sql = "SELECT * FROM movie_list WHERE movie_id={$movie_genre['movie_id']};";
-            echo '<h1>'.$movie_sql.'</h1>';
+            echo "<hr>";
+            echo '<h4>'.$movie_sql.'</h4>';
+            
             $movie_result = mysqli_query($conn, $movie_sql);
             $movie = mysqli_fetch_array($movie_result);
-            echo '<br><span style="font-size:35px"><a href="movie_saw.php?id='
+            echo '<br><span style="font-size:25px"><a href="movie_saw.php?id='
             .$movie["movie_id"].'"style="text-decoration:none; color:black;">'
             .$movie["movie_name"].'</a></span><br>';
           }

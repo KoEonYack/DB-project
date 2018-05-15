@@ -23,7 +23,7 @@
 
                 <button type="submit" class="btn btn-default">Submit</button>
                 <p align="right">
-                <a href="button.html"><button type="button" class="btn btn-primary">Go To Main</button></a>
+                <a href="../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a>
                 </p>
             </form>
 

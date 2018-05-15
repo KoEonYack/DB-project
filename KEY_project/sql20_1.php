@@ -13,9 +13,9 @@
     <body>
         <div class="container"><br><br>
             <?php 
-                $user = $_POST['username'];
+                # $user = $_POST['username'];
 
-                require('db_connect.php');
+                require('../db_connect.php');
                 $result = mysqli_query($conn, "SELECT * FROM user_list");
     
                echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
@@ -29,8 +29,8 @@
                 <th style='text-align:center;'>Email</th>
                 <th style='text-align:center;'>Phone</th>
                 <th style='text-align:center;'>profile url</th>
-                
                 </tr>";
+
                 while( $row = mysqli_fetch_array($result) ){
                     if ( $row["user_name"] == $user ){ // 입력 받은 유저하고 디비에 있는 유저
                         if( $row["open_range"] == "all" || $row["open_range"] == "followers" ){
@@ -39,7 +39,10 @@
                             $user_email = $row["user_email"];
                             $user_phone = $row["user_phone"];
                             $user_profile_url = $row["user_profile_url"];
-                            echo "<tr> <td>".$name."</td>  <td>".$nick_name."</td>  <td>".$user_email."</td>  <td>".$user_phone."</td>  <td>".$user_profile_url."</td>  </tr>";   
+                            echo "<tr> <td>".$name."</td>  <td>".$nick_name."</td>  <td>".$user_email."</td>  
+                            <td>".$user_phone."</td>  
+                            <td> <img src='$user_profile_url' width='500' height='300'> </td>
+                              </tr>";   
                         }
                         else{
                             $name = $row["user_name"];

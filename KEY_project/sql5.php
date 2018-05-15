@@ -18,7 +18,7 @@
         </p>
 
         <?php
-            require('db_connect.php');
+            require('../db_connect.php');
             $result = mysqli_query($conn, "SELECT * FROM movie_list WHERE release_date = 2018");
 
            echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
@@ -39,7 +39,7 @@
             mysqli_close($conn);
         ?>
         
-        <a href="button.html"><button type="button" class="btn btn-primary">Go To Main</button></a>
+        <a href="../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a>
         </div>
     </body>
 </html>

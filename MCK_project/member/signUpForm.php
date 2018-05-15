@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="Ko">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,6 +31,7 @@
 
 <body>
     <article class="container">
+    <br><br>
         <div class="page-header">
           <h1>회원가입</h1>
           <h2>중복체크: SELECT * FROM user_list WHERE nick_name = '{$memberId}'</h2>
