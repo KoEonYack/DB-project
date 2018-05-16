@@ -41,12 +41,11 @@
             $movie_sql = "SELECT * FROM movie_list WHERE movie_id={$movie_genre['movie_id']};";
             echo "<hr>";
             echo '<h4>'.$movie_sql.'</h4>';
-            
             $movie_result = mysqli_query($conn, $movie_sql);
             $movie = mysqli_fetch_array($movie_result);
-            echo '<br><span style="font-size:25px"><a href="movie_saw.php?id='
-            .$movie["movie_id"].'"style="text-decoration:none; color:black;">'
-            .$movie["movie_name"].'</a></span><br>';
+            echo '<br><button type="button" class="btn btn-default"><a href="../KEY_project/movie_info.php?id='
+            .$movie["movie_id"].'" style="text-decoration:none; color:black;">'
+            .$movie["movie_name"].'</a></button>';
           }
         }
       }

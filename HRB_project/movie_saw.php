@@ -10,10 +10,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
 </head>
 <body>
-    <h1><a href="../button.html">????</a></h1>
-    <?php
-        require('movie_saw_query.php');  
-        movieSawList();
-    ?>
+    <div class="container"><br><br>
+        <a href="../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>
+        <?php
+            require('movie_saw_query.php');  
+            movieSawList();
+        ?>
+        <br>
+    </div>
 </body>
 </html>
