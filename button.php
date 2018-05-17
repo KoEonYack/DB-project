@@ -85,6 +85,9 @@
             </p>
             
             <p>
+                <a href="./ESK_project/user_following.php"><button type="button" class="btn btn-default"> 27. 팔로잉 리스트 팔로워 리스트 조회 </button></a>
+            </p>
+            <p>
                 <a href="./KEY_project/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>
             </p>
             <br><br><br><br>
