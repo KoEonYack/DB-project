@@ -18,17 +18,19 @@
                 require('./include/session.php');
                 echo "<h1> insert user_want_list  </h1>";
                 global $conn; 
-                $movie_id = $_POST['movie_id'];
-                $movie_name = $_POST['movie_name'];
+                $comment_id = $_POST['comment_id'];
+                $contents = $_POST['contents'];
                 $user_id = $_POST['user_id'];
                 $user_name = $_POST['user_name'];
 
-                $sql = "INSERT INTO user_want_list VALUES({$user_id},{$movie_id});";
-                echo "<h4> User_want_lsit에 추가: ".$sql."</h4>";
+                $sql = "INSERT INTO comment_like_list VALUES({$user_id},{$comment_id});";
+                echo "<h4> comment_like_list에 추가: ".$sql."</h4>";
+//                echo '<h1>: ddasdasdd '.$contents.'</h1>';
 
-                echo "<h3>".$user_name."님의 User_want_lsit에 ".$movie_name."을 보고 싶은 영화로 추가하였습니다. </h3>";
+                
+                echo "<h3>".$user_name."님께서 comment_like_list에 \"".$contents."\"에 좋아요를 누르셨습니다. </h3>";
 
-                mysqli_query($conn,$sql);
+                mysqli_query($conn, $sql);
               ?>
             <br>
         </div>

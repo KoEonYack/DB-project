@@ -4,12 +4,12 @@
     // 영화리스트 출력하는 함수
     function notseenMovieList(){
         global $conn;
-        $sql = "SELECT * FROM movie_list 
-        WHERE `movie_id` NOT IN 
-        (SELECT `movie_id` FROM `user_rating_list` WHERE `userlist_id` = 1)";
+        $user_name= $_SESSION['ses_userid'];
+        $user_id = $_SESSION['userlist_id'];
+        $sql = "SELECT * FROM movie_list WHERE `movie_id` NOT IN (SELECT `movie_id` FROM user_want_list WHERE `userlist_id` = $user_id)";
 
         $result = mysqli_query($conn, $sql);
-        echo '<h1>/"'.$_SESSION['ses_userid'].'/"님 회원가입을 축하합니다. 10개의 영화를 평가해주세요.</h1><p>';
+        echo '<h1>/"'.$user_name.'/"님께서 로그인 중.</h1><p>';
         echo '<h1>평가하지 않은 영화들 :'.$sql.'</h1><p>';
 
         $n=0;
@@ -22,8 +22,8 @@
           $n++;
           if($n%5===0) echo '</p><p>';
         }
-        if(isset($_POST['name']) && isset($_POST['point'])){
-          echo '<h4>'.$_POST['name'].'을 '.$_POST['point'].'점으로 평가하셨습니다!</h4>';
+        if(isset($_POST['name']) && isset($_POST['check'])){
+          echo '<h4>'.$_POST['name'].'을 보고싶은 영화로'.$_POST['check'].'하셨습니다.. </h4>';
         }
     }
 
@@ -32,38 +32,32 @@
       //id에 대해 GET으로 받은 변수가 존재할 때
         if(isset($_GET['id'])){
             global $conn;
-
+            $user_name= $_SESSION['ses_userid'];
+            $user_id = $_SESSION['userlist_id'];
             // 영화제목을 출력해야 하므로 가져온다.
             $sql = "SELECT movie_name FROM movie_list WHERE movie_id=".$_GET['id'];
-            echo '영화제목 표시 : '.$sql.'<p>';
+            echo '<h4>영화제목 표시 : '.$sql.'</h4>';
             $result = mysqli_query($conn,$sql);
             $movie = mysqli_fetch_array($result);
-
-            rateForm($_SESSION['userlist_id'],$_GET['id'],$movie['movie_name']);
+            rateForm($user_id, $user_name, $_GET['id'], $movie['movie_name']);
       }
     }
 
     // 평가 형식
-    function rateForm($user_id,$movie_id, $movie_name){
+    function rateForm($user_id, $user_name, $movie_id, $movie_name){
         echo '<br><span style="font-size:35px"> '.$movie_name.'</span>';
         // hidden 타입은 보이지 않게 넘기는 값들.
-        echo '<form action="./hopeToSee_Date.php" method="post">
+        echo '<form action="./hopeToSee_Data.php" method="post">
         <div class="btn-group" data-toggle="buttons">
-        
-          <label class="btn btn-secondary active">
-            <input type="radio" name="point" value="1.0" id="option1" autocomplete="off" checked> 1점
-          </label>
-
           <label class="btn btn-secondary">
-            <input type="radio" name="point" value="2.0" id="option2" autocomplete="off"> 2점
+            <input type="radio" name="check" value="hopeToSee" id="option2" autocomplete="off"> 보고 싶어요
           </label>
-
         </div>
-        <input type="hidden" name="movie" value="'.$movie_id.'">
-        <input type="hidden" name="user" value="'.$user_id.'">
-        <input type="hidden" name="type" value="'.$rating_type.'">
-        <input type="hidden" name="name" value="'.$movie_name.'">
-        <br><input class="btn btn-primary" type="submit" value="평가">
+        <input type="hidden" name="movie_id" value="'.$movie_id.'">
+        <input type="hidden" name="user_id" value="'.$user_id.'">
+        <input type="hidden" name="user_name" value="'.$user_name.'">
+        <input type="hidden" name="movie_name" value="'.$movie_name.'">
+        <br><input class="btn btn-primary" type="submit" value="보고 싶어요!">
         </form>';
     }
 ?>

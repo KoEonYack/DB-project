@@ -12,9 +12,10 @@
         <div class="container"><br><br>
             <a href="../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>
             <?php
-                require('initial_rating_query.php');
-                movieList();
+                require('comment_like_query.php');
+                commentList();
                 movieClick();
+                commentClick();
             ?>
             <br>
         </div>
