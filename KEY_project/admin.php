@@ -71,7 +71,7 @@
         <a href="./admin_user_rating.php"><button type="button" class="btn btn-primary">사용자가 별점을 준 리스트</button></a>
         
         <br><br><br><br><br>
-        <a href="../button.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
+        <a href="../button.php"><button type="button" class="btn btn-success">Go To Index Page</button></a>
         </div>
     </body>
 </html>
