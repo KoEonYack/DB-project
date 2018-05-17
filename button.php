@@ -24,7 +24,6 @@
                     }
                     else{
                         echo "<small> 안녕하세요 ", $_SESSION['ses_userid']  ,"님!      </small>";
-                        echo '<a href="./MCK_project/member/signOut.php"><button type="button" class="btn btn-primary">로그아웃</button></a>';
                     }
                 ?>
                 </h3>
@@ -36,15 +35,12 @@
                 <?php
                     session_start();
                     if(!isset($_SESSION['ses_userid'])){
-                        echo '<a href="./MCK_project/member/main.php"><button type="button" class="btn btn-default"> 2. Login</button></a>';
+                        echo '<a href="./MCK_project/member/main.php"><button type="button" class="btn btn-info"> 2. Login</button></a>';
                     }
                     else{
-                        echo '<a href="./MCK_project/member/signOut.php"><button type="button" class="btn btn-default"> 2. Logout </button></a>';
+                        echo '<a href="./MCK_project/member/signOut.php"><button type="button" class="btn btn-info"> 2. Logout </button></a>';
                     }
                 ?>
-
-
-               
                 <a href="#"><button type="button" class="btn btn-default"> SQL3 </button></a>
                 <a href="#"><button type="button" class="btn btn-default"> SQL4 </button></a>
                 <a href="KEY_project/Current_screening_sql5.php"><button type="button" class="btn btn-default"> 5. 현재 상영작 </button></a>
@@ -100,7 +96,7 @@
                 <button type="button" class="btn btn-default"> 24-3. 별점 수 </button>  
             </p>
 
-            <br><br>
+            <br><br><br><br>
             <a href="index.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
         </div>
     </body>

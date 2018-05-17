@@ -17,7 +17,7 @@
         <div id="wrap">
             <div id="container"><br><br>
                 <h1 class="title">왓차에 오신 것을 환영합니다.</h1>
-                <h1> 로그인: SELECT * FROM user_list WHERE nick_name = '{$memberId}' AND user_password = '{$memberPw}'</h1>
+                <h4> SELECT * FROM user_list WHERE nick_name = '{$memberId}' AND user_password = '{$memberPw}'</h4>
                 <hr><br>
                 <form name="singIn" action="./signIn.php" method="post" onsubmit="return checkSubmit()">
                     <div class="line">
