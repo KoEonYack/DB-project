@@ -68,13 +68,13 @@
                 <button type="button" class="btn btn-default"> SQL14 : 미완성 </button>
                 <button type="button" class="btn btn-default"> SQL15 : 미완성 </button>
                 <button type="button" class="btn btn-default"> SQL16 : 미완성 </button>
-                <button type="button" class="btn btn-default"> SQL17 : 미완성 </button> 
+                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17. 관심없는 영화 추가 </button></a> 
                 <button type="button" class="btn btn-default"> SQL18 : 미완성 </button>                 
             </p>
 
             </p>
                 <button type="button" class="btn btn-default"> SQL19 : 미완성</button> 
-                <a href="sql20.php"><button type="button" class="btn btn-default"> SQL20 : 미완성 </button></a>
+                <a href="./KEY_project/serarch_user_sql20.php"><button type="button" class="btn btn-default"> SQL20 : 유저 검색 </button></a>
                 <button type="button" class="btn btn-default"> SQL21 : 미완성 </button> 
                 <a href="./HRB_project/best_comment.php"><button type="button" class="btn btn-default"> 22. 최고 코멘트와 받은 좋아요 수 </button></a>
                 <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
@@ -84,7 +84,10 @@
                 <button type="button" class="btn btn-default"> 24-2. 가장 많이 준 별점 </button> 
                 <button type="button" class="btn btn-default"> 24-3. 별점 수 </button>  
             </p>
-
+            
+            <p>
+                <a href="./KEY_project/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>
+            </p>
             <br><br><br><br>
             <a href="index.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
         </div>

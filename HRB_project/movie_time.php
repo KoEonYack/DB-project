@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
-        <h1><a href="../button.html">메인으로</a></h1>
+        <h1><a href="../button.php">메인으로</a></h1>
         <!-- 쿼리가 짧아서 그냥 여기다 씀-->
         <?php
             require('../db_connect.php');

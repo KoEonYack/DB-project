@@ -53,7 +53,7 @@
               echo "Error :: invaild id";
           }
         }
-
+        
         /*
         if(isset($_GET['id'])){
           global $conn;

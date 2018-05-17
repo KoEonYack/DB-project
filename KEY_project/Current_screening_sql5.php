@@ -39,7 +39,7 @@
             mysqli_close($conn);
         ?>
         
-        <a href="../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a>
+        <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
         </div>
     </body>
 </html>

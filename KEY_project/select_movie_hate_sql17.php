@@ -14,15 +14,15 @@
     <body>
         <div class="container"><br><br>
             <h2>SQL Table</h2>
-            <p>유저는 영화의 상세 정보를 볼 수 있다.
+            <p>유저는 싫어하는 영화를 추가할 수 있다. 
             <br>
-            SELECT * FROM movie_list;
+                STEP1. SELECT * FROM movie_list;
             </p> <hr>
-
+            
             <?php
                 echo "<p>";
                 require('../db_connect.php');
-                require('movie_info_quary.php');
+                # require('./select_movie_hate_sql17.php');
                 $movie_result = mysqli_query($conn, "SELECT * FROM movie_list");
                 $n = 0;
                 while($movie = mysqli_fetch_array($movie_result)){
@@ -35,7 +35,7 @@
                   $n++;
                   if($n%5===0) echo '</p><p>';
                 }
-                movieClick();
+                # movieClick();
             ?>
             
             <br><a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>

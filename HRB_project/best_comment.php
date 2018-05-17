@@ -14,7 +14,7 @@
             require('best_comment_query.php');
             bestComment();
             ?>
-            <br><br><a href="../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a>
+            <br><br><a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
         </div>
     </body>
 </html>
