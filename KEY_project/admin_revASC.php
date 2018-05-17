@@ -25,19 +25,21 @@
            echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
            # echo "<table class='table table-hover' >";
 
-            echo "<tr><th style='text-align:center;'>Movie ID</th><th style='text-align:center;'>Movie Title</th>
+            echo "<tr><th style='text-align:center;'>Rank</th><th style='text-align:center;'>Movie Title</th>
             <th style='text-align:center;'>English Title</th><th style='text-align:center;'>Year</th>
             <th style='text-align:center;'>Revenue</th>    
             </tr>";
 
+            $rank = 1;
             while( $row = mysqli_fetch_array($result) ){  
-                $id = $row["movie_id"]; 
                 $title = $row["movie_name"];
                 $content = $row["english_name"];
                 $date = $row["release_date"];
                 $revenue = $row["revenue"];
                 #echo "<tr><td><div>".$id."</div></td><td>".$title."</td><td  style='padding-right:200px;'>".$content."</td></tr>";
-                echo "<tr>  <td>".$id."</td>  <td>".$title."</td>  <td>".$content."</td>  <td>".$date."</td> <td>".number_format($revenue)."</td>  </tr>";
+                echo "<tr>  <td>".$rank."</td>  <td>".$title."</td>  <td>".$content."</td>  
+                <td>".$date."</td> <td><strong>".number_format($revenue)."</strong></td>  </tr>";
+                $rank++;
             }
             echo "</table>";
 
