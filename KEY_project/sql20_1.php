@@ -16,8 +16,8 @@
                 # $user = $_POST['username'];
 
                 require('../db_connect.php');
-                $result = mysqli_query($conn, "SELECT * FROM user_list");
-    
+            $result = mysqli_query($conn, "SELECT * FROM user_list");
+            
                echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
                # echo "<table class='table table-hover' >";
     
