@@ -9,5 +9,8 @@
         echo "<script>alert('로그아웃 완료');
         history.back();</script>
         ";
+        header("HTTP/1.1 307 Temporary move"); 
+        header("Location: ../../button.php");
+        exit;
     }
 ?>

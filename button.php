@@ -65,14 +65,15 @@
             </p>
 
             <p>
-                <button type="button" class="btn btn-default"> SQL13 </button> 
                 <a href="./MCK_project/comment_like.php"><button type="button" class="btn btn-default"> 14. 댓글에 좋아요 누르기 </button></a>
                 <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15. 보고싶어요 체크하기 </button></a>
-                <button type="button" class="btn btn-default"> SQL16 </button>
-                <button type="button" class="btn btn-default"> SQL17 </button> 
+                <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고 싶은 영화 보기 </button></a>
+                <a href="./MCK_project/wanted_nation.php"><button type="button" class="btn btn-default"> 16-2. 보고 싶은 영화 국가별 보기 </button></a>
+                <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고 싶은 영화 장르별 보기 </button></a>
             </p>
 
             </p>
+                <button type="button" class="btn btn-default"> SQL17 </button> 
                 <button type="button" class="btn btn-default"> SQL19 : 미완성</button> 
                 <a href="sql20.php"><button type="button" class="btn btn-default"> SQL20 : 미완성 </button></a>
                 <button type="button" class="btn btn-default"> SQL21 : 미완성 </button> 

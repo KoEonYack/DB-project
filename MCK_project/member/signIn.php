@@ -33,6 +33,11 @@
                             history.back();
                             </script>
                         ";
+
+                        header("HTTP/1.1 307 Temporary move"); 
+                        header("Location: ../../button.php");
+                        exit;
+
                         # echo '<h1>'.$_SESSION['ses_userid'].'님 안녕하세요 watcha입니다. </h1>';
                         # echo '<a href="../../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>';
                         # echo '<a href="./signOut.php"><button type="button" class="btn btn-primary">로그아웃</button></a>';
