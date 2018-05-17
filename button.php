@@ -80,14 +80,8 @@
                 <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
             </p>
             <p>
-<<<<<<< HEAD
                 <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
                 <a href="./HRB_project/star_info.php"><button type="button" class="btn btn-default"> 24. 별점 평균과 가장 많이 준 별점 </button></a>
-=======
-                <button type="button" class="btn btn-default"> 24-1. 별점 평균 </button>
-                <button type="button" class="btn btn-default"> 24-2. 가장 많이 준 별점 </button> 
-                <button type="button" class="btn btn-default"> 24-3. 별점 수 </button>  
->>>>>>> a5066f652e335b5dab08c58a4c0f08789f650d03
             </p>
 
             <br><br><br><br>
