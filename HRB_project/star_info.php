@@ -10,11 +10,13 @@
     </head>
     <body>
         <div class="container"><br><br>
+            <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>
             <?php
-            require('best_comment_query.php');
-            bestComment();
+                require('star_info_query.php');
+                starAverage();
+                frequentStar();
             ?>
-            <br><br><a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
+            <br>
         </div>
     </body>
 </html>
