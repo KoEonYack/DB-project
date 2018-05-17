@@ -31,9 +31,10 @@
                         echo '<a href="../../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>';
                         echo '<a href="./signOut.php"><button type="button" class="btn btn-primary">로그아웃</button></a>';
                     }
-
-                    if($row == null){
-                        echo '<h1> 로그인 실패 아이디와 비밀번호가 일치하지 않습니다.</h1>';
+                    else{
+                        echo "<script>alert('로그인 실패 아이디와 비밀번호가 일치하지 않습니다.');
+                        history.back();</script>
+                        ";
                     }
             ?>
             <br>
