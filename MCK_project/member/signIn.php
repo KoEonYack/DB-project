@@ -27,13 +27,20 @@
                     if ($row != null) {
                         $_SESSION['ses_userid'] = $row['nick_name'];
                         $_SESSION['userlist_id']= $row['userlist_id'];
-                        echo '<h1>'.$_SESSION['ses_userid'].'님 안녕하세요 watcha입니다. </h1>';
-                        echo '<a href="../../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>';
-                        echo '<a href="./signOut.php"><button type="button" class="btn btn-primary">로그아웃</button></a>';
+                        
+                        echo "<script>alert('로그인 성공');
+                            history.back();
+                            history.back();
+                            </script>
+                        ";
+                        # echo '<h1>'.$_SESSION['ses_userid'].'님 안녕하세요 watcha입니다. </h1>';
+                        # echo '<a href="../../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>';
+                        # echo '<a href="./signOut.php"><button type="button" class="btn btn-primary">로그아웃</button></a>';
                     }
-
-                    if($row == null){
-                        echo '<h1> 로그인 실패 아이디와 비밀번호가 일치하지 않습니다.</h1>';
+                    else{
+                        echo "<script>alert('로그인 실패 아이디와 비밀번호가 일치하지 않습니다.');
+                        history.back();</script>
+                        ";
                     }
             ?>
             <br>

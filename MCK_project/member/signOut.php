@@ -5,6 +5,9 @@
     unset($_SESSION['ses_userid']);
 
     if($_SESSION['ses_userid'] == null){
-        echo '<br /><br /><h1>로그아웃 완료</h1> ';
+        echo '<br/><br/><h1>로그아웃 완료</h1> ';
+        echo "<script>alert('로그아웃 완료');
+        history.back();</script>
+        ";
     }
 ?>

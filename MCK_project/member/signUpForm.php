@@ -34,9 +34,11 @@
     <br><br>
         <div class="page-header">
           <h1>회원가입</h1>
-          <h2>중복체크: SELECT * FROM user_list WHERE nick_name = '{$memberId}'</h2>
-          <h2>가입: INSERT INTO `user_list`(`nick_name`, `user_password`, `user_email`, `user_phone`, `user_name`) VALUES('{$memberId}','{$memberPw}','{$memberEmailAddress}','{$memberNickName}','{$memberName}')</h2>
+          <hr>
+          <h4>중복체크: SELECT * FROM user_list WHERE nick_name = '{$memberId}'</h4>
+          <h4>가입: INSERT INTO `user_list`(`nick_name`, `user_password`, `user_email`, `user_phone`, `user_name`) VALUES('{$memberId}','{$memberPw}','{$memberEmailAddress}','{$memberNickName}','{$memberName}')</h4>
         </div>
+        <hr>
         <div class="col-md-6 col-md-offset-3">
             <form name="signUp" action="./memberSave.php" method="post" onsubmit="return checkSubmit()">
                 <div class="form-group">
