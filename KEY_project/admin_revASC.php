@@ -20,7 +20,7 @@
 
         <?php
             require('../db_connect.php');
-            $result = mysqli_query($conn, "SELECT * FROM movie_list ORDER BY revenue ASC");
+            $result = mysqli_query($conn, "SELECT * FROM movie_list ORDER BY CAST(revenue AS UNSIGNED) ASC");
 
            echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
            # echo "<table class='table table-hover' >";
@@ -37,7 +37,7 @@
                 $date = $row["release_date"];
                 $revenue = $row["revenue"];
                 #echo "<tr><td><div>".$id."</div></td><td>".$title."</td><td  style='padding-right:200px;'>".$content."</td></tr>";
-                echo "<tr>  <td>".$id."</td>  <td>".$title."</td>  <td>".$content."</td>  <td>".$date."</td> <td>".$revenue."</td>  </tr>";
+                echo "<tr>  <td>".$id."</td>  <td>".$title."</td>  <td>".$content."</td>  <td>".$date."</td> <td>".number_format($revenue)."</td>  </tr>";
             }
             echo "</table>";
 
