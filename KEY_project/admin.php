@@ -59,9 +59,19 @@
             $content = $row["movie_rev"];
             echo "최저 영화 수익(\$달러): ".$content." $";
 
-
+            echo "<br><br>";
 
         ?>
+
+        <br>
+        <h4> 더 자세한 관리 보기 </h4>
+        <hr>
+        <br><a href="./admin_revASC.php"><button type="button" class="btn btn-primary">영화 수익 낮은 순으로 보기</button></a>
+        <a href="./admin_revASC.php"><button type="button" class="btn btn-primary">영화 수익 높은 순으로 보기</button></a>
+        <a href="./admin_user_rating.php"><button type="button" class="btn btn-primary">사용자가 별점을 준 리스트</button></a>
+        
+        <br><br><br><br><br>
+        <a href="../button.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
         </div>
     </body>
 </html>
