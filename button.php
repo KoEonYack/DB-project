@@ -59,38 +59,27 @@
             <p>
                 <a href="./HRB_project/movie_nation.php"><button type="button" class="btn btn-default">10-2. 국가별로 보기</button></a>
                 <a href="./HRB_project/movie_genre.php"><button type="button" class="btn btn-default">10-3. 장르별로 보기</button></a>
-                <a href="sql5.php"><button type="button" class="btn btn-default"> SQL5 </button></a>
-                <a href="sql6.php"><button type="button" class="btn btn-default"> SQL6 </button></a>
-                <a href="sql7.php"><button type="button" class="btn btn-default"> SQL7 </button></a>
-
+                <button type="button" class="btn btn-default"> SQL11 : 미완성</button>
+                <button type="button" class="btn btn-default"> SQL12 : 미완성</button> 
+                <button type="button" class="btn btn-default"> SQL13 : 미완성</button> 
             </p>
 
             <p>
-                <button type="button" class="btn btn-default"> SQL8 </button>
-                <button type="button" class="btn btn-default"> SQL9 </button>
-                <button type="button" class="btn btn-default"> SQL10 </button>
-                <button type="button" class="btn btn-default"> SQL11 </button>
-                <button type="button" class="btn btn-default"> SQL12 </button> 
-            </p>
-
-            <p>
-                <button type="button" class="btn btn-default"> SQL13 </button> 
-                <button type="button" class="btn btn-default"> SQL14 </button>
-                <button type="button" class="btn btn-default"> SQL15 </button>
-                <button type="button" class="btn btn-default"> SQL16 </button>
-                <button type="button" class="btn btn-default"> SQL17 </button> 
+                <button type="button" class="btn btn-default"> SQL14 : 미완성 </button>
+                <button type="button" class="btn btn-default"> SQL15 : 미완성 </button>
+                <button type="button" class="btn btn-default"> SQL16 : 미완성 </button>
+                <button type="button" class="btn btn-default"> SQL17 : 미완성 </button> 
+                <button type="button" class="btn btn-default"> SQL18 : 미완성 </button>                 
             </p>
 
             </p>
-                <button type="button" class="btn btn-default"> SQL18 </button> 
-                <button type="button" class="btn btn-default"> SQL19 </button> 
-                <a href="sql20.php"><button type="button" class="btn btn-default"> SQL20 </button></a>
-                <button type="button" class="btn btn-default"> SQL21 </button> 
+                <button type="button" class="btn btn-default"> SQL19 : 미완성</button> 
+                <a href="sql20.php"><button type="button" class="btn btn-default"> SQL20 : 미완성 </button></a>
+                <button type="button" class="btn btn-default"> SQL21 : 미완성 </button> 
                 <a href="./HRB_project/best_comment.php"><button type="button" class="btn btn-default"> 22. 최고 코멘트와 받은 좋아요 수 </button></a>
-
+                <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
             </p>
             <p>
-                <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
                 <button type="button" class="btn btn-default"> 24-1. 별점 평균 </button>
                 <button type="button" class="btn btn-default"> 24-2. 가장 많이 준 별점 </button> 
                 <button type="button" class="btn btn-default"> 24-3. 별점 수 </button>  
