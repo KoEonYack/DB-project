@@ -84,6 +84,11 @@
                 <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
                 <a href="./HRB_project/star_info.php"><button type="button" class="btn btn-default"> 24. 별점 평균과 가장 많이 준 별점 </button></a>
             </p>
+            <p>
+                <a href="./MCK_project/search_user.php"><button type="button" class="btn btn-default"> 28. 다른 사용자 검색 </button></a>
+                <a href="./MCK_project/betweenUser_rating.php"><button type="button" class="btn btn-default"> 29. 다른 사용자와의 평가</button></a>
+                <button type="button" class="btn btn-default"> SQL13 : 미완성</button> 
+            </p>
 
             <br><br><br><br>
             <a href="index.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
