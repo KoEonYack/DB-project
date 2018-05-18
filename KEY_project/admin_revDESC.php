@@ -15,7 +15,7 @@
         <h2>SQL Table</h2>
         <p>영화 Revenue DEC 순으로 정렬
         <br>
-        SELECT * FROM movie_list WHERE release_date > 2018;
+        SELECT * FROM movie_list ORDER BY CAST(revenue AS UNSIGNED) DESC
         </p>
 
         <?php

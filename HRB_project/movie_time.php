@@ -32,7 +32,7 @@
                 LEFT JOIN user_rating_list
                 ON movie_list.movie_id=user_rating_list.movie_id";
                 echo '<h4>'.$sql.'</h4>';
->>>>>>> a9de26b4852d051dccc34da3c53afb67d847af7c
+# >>>>>>> a9de26b4852d051dccc34da3c53afb67d847af7c
 
                 $result = mysqli_query($conn, $sql);
                 $time = mysqli_fetch_array($result);
