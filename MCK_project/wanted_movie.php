@@ -15,6 +15,7 @@
             require('wanted_movie_query.php');  
             wantMovieList();
         ?>
+        <br><br>
         <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>
         <br>
     </div>

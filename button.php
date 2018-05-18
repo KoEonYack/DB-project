@@ -76,7 +76,9 @@
                 <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고 싶은 영화 장르별 보기 </button></a>
                 <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17. 관심없는 영화 추가 </button></a> 
 
-                <button type="button" class="btn btn-default"> SQL18 : 미완성 </button> 
+                <a href="./KEY_project/hated_movie.php"><button type="button" class="btn btn-default"> 18-1. 관심없는 영화 보기 </button></a>
+                <a href="#"><button type="button" class="btn btn-default"> 18-2. 관심없는 영화 국가별 보기 </button></a>
+                <a href="#"> <button type="button" class="btn btn-default"> 18-2. 관심없는 영화 장르별 보기 </button></a>
                 <button type="button" class="btn btn-default"> SQL19 : 미완성</button> 
                 <a href="./KEY_project/serarch_user_sql20.php"><button type="button" class="btn btn-default"> SQL20 : 유저 검색 </button></a>
                 <button type="button" class="btn btn-default"> SQL21 : 미완성 </button> 
