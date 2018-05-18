@@ -15,7 +15,6 @@
                 require('initial_rating_query.php');
                 movieList();
                 movieClick();
-                rateForm();
             ?>
             <br>
         </div>

@@ -15,7 +15,6 @@
                 require('hopeToSee_movie_query.php');
                 notseenMovieList();
                 movieClick();
-                rateForm();
             ?>
             <br>
         </div>

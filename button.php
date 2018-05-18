@@ -35,13 +35,13 @@
                 <?php
                     session_start();
                     if(!isset($_SESSION['ses_userid'])){
-                        echo '<a href="./MCK_project/member/main.php"><button type="button" class="btn btn-info"> 2. Login</button></a>';
+                        echo '<a href="./MCK_project/member/main.php"><button type="button" class="btn btn-info"> 2-1. Login</button></a>';
                     }
                     else{
-                        echo '<a href="./MCK_project/member/signOut.php"><button type="button" class="btn btn-info"> 2. Logout </button></a>';
+                        echo '<a href="./MCK_project/member/signOut.php"><button type="button" class="btn btn-info"> 2-2. Logout </button></a>';
                     }
                 ?>
-                <a href="#"><button type="button" class="btn btn-default"> SQL3 </button></a>
+                <a href="./MCK_project/initial_rating.php"><button type="button" class="btn btn-default">3. 회원가입시 10개의 영화평가 </button></a>
                 <a href="#"><button type="button" class="btn btn-default"> SQL4 </button></a>
                 <a href="KEY_project/Current_screening_sql5.php"><button type="button" class="btn btn-default"> 5. 현재 상영작 </button></a>
             </p>
@@ -65,24 +65,39 @@
             </p>
 
             <p>
-                <button type="button" class="btn btn-default"> SQL14 : 미완성 </button>
-                <button type="button" class="btn btn-default"> SQL15 : 미완성 </button>
-                <button type="button" class="btn btn-default"> SQL16 : 미완성 </button>
-                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17. 관심없는 영화 추가 </button></a> 
-                <button type="button" class="btn btn-default"> SQL18 : 미완성 </button>                 
-            </p>
+                <a href="./MCK_project/comment_like.php"><button type="button" class="btn btn-default"> 14. 댓글에 좋아요 누르기 </button></a>
+                <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15. 보고싶어요 체크하기 </button></a>
+                <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고 싶은 영화 보기 </button></a>
+                <a href="./MCK_project/wanted_nation.php"><button type="button" class="btn btn-default"> 16-2. 보고 싶은 영화 국가별 보기 </button></a>
 
             </p>
+
+            <p>
+                <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고 싶은 영화 장르별 보기 </button></a>
+                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17. 관심없는 영화 추가 </button></a> 
+                <a href="./KEY_project/hated_movie.php"><button type="button" class="btn btn-default"> 18-1. 관심없는 영화 보기 </button></a>
+                <a href="./KEY_project/hated_nation.php"><button type="button" class="btn btn-default"> 18-2. 관심없는 영화 국가별 보기 </button></a>
+            </p>
+
+            <p>
+                <a href="#"> <button type="button" class="btn btn-default"> 18-3. 관심없는 영화 장르별 보기 </button></a>
                 <button type="button" class="btn btn-default"> SQL19 : 미완성</button> 
                 <a href="./KEY_project/serarch_user_sql20.php"><button type="button" class="btn btn-default"> SQL20 : 유저 검색 </button></a>
                 <button type="button" class="btn btn-default"> SQL21 : 미완성 </button> 
-                <a href="./HRB_project/best_comment.php"><button type="button" class="btn btn-default"> 22. 최고 코멘트와 받은 좋아요 수 </button></a>
-                <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
+
             </p>
             <p>
+                <a href="./HRB_project/best_comment.php"><button type="button" class="btn btn-default"> 22. 최고 코멘트와 받은 좋아요 수 </button></a>
+                <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
                 <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
                 <a href="./HRB_project/star_info.php"><button type="button" class="btn btn-default"> 24. 별점 평균과 가장 많이 준 별점 </button></a>
             </p>
+            <p>
+                <a href="./MCK_project/search_user.php"><button type="button" class="btn btn-default"> 28. 다른 사용자 검색 </button></a>
+                <a href="./MCK_project/betweenUser_rating.php"><button type="button" class="btn btn-default"> 29. 다른 사용자와의 평가</button></a>
+                <button type="button" class="btn btn-default"> SQL30 : 미완성</button> 
+            </p>
+
             
             <p>
                 <a href="./KEY_project/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>

@@ -29,6 +29,8 @@
       //id에 대해 GET으로 받은 변수가 존재할 때
         if(isset($_GET['id'])){
             global $conn;
+            $user_name= $_SESSION['ses_userid'];
+            $user_id = $_SESSION['userlist_id'];
 
             // 영화제목을 출력해야 하므로 가져온다.
             $sql = "SELECT movie_name FROM movie_list WHERE movie_id=".$_GET['id'];
@@ -36,12 +38,12 @@
             $result = mysqli_query($conn,$sql);
             $movie = mysqli_fetch_array($result);
 
-            rateForm($_SESSION['userlist_id'],$_GET['id'],$movie['movie_name'],'new_rating');
+            rateForm($user_id, $user_name, $_GET['id'],$movie['movie_name'],'new_rating');
       }
     }
 
     // 평가 형식
-    function rateForm($user_id,$movie_id, $movie_name,$rating_type){
+    function rateForm($user_id, $user_name, $movie_id, $movie_name,$rating_type){
         echo '<br><span style="font-size:35px"> '.$movie_name.'</span>';
         // hidden 타입은 보이지 않게 넘기는 값들.
         echo '<form action="./insert_ratingData.php" method="post">
@@ -62,10 +64,10 @@
             <input type="radio" name="point" value="5.0" id="option3" autocomplete="off"> 5점
           </label>
         </div>
-        <input type="hidden" name="movie" value="'.$movie_id.'">
-        <input type="hidden" name="user" value="'.$user_id.'">
-        <input type="hidden" name="type" value="'.$rating_type.'">
-        <input type="hidden" name="name" value="'.$movie_name.'">
+        <input type="hidden" name="movie_id" value="'.$movie_id.'">
+        <input type="hidden" name="user_id" value="'.$user_id.'">
+        <input type="hidden" name="user_name" value="'.$user_name.'">
+        <input type="hidden" name="movie_name" value="'.$movie_name.'">
         <br><input class="btn btn-primary" type="submit" value="평가">
         </form>';
     }
