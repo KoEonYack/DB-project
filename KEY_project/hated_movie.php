@@ -15,11 +15,15 @@
             session_start();
             if(!isset($_SESSION['ses_userid'])){
                 echo "<small>로그인을 해주세요</small>";
+                echo "<script>alert('로그인 해주세요');
+                history.back();
+                </script>
+            ";
             }
             else{
                 # echo '싫어하는 영화 목록을 보여줍니다!';
             }
-            require('./hated_movie_quary.php');
+            require('./hated_movie_query.php');
             hateMovieList();
             
             # genreClick();

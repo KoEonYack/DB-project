@@ -42,9 +42,6 @@
             echo "   ";
             if($n%5===0) echo '</p><p>';
           }
-
-
-
       
       echo '</div>';
     }
