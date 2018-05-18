@@ -11,11 +11,21 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
     <body>
+        <?php     
+            session_start();
+            if(!isset($_SESSION['ses_userid'])){
+                echo
+                '<script>
+                    alert("로그인을 해주세요");
+                    document.location.href="../button.php"; 
+                </script>';
+            }
+        ?>
         <div class="container"><br><br>
         <h2>SQL Senario</h2>
         <p>The user can search for the user registered on this homepage.</p>
         <hr>
-            <form role="form" action="sql20_1.php" method="POST"  > 
+            <form role="form" action="serarch_user_sql20_1.php" method="POST"  > 
                 <div class="form-group"> 
                     <label for="username">Search user name</label> 
                     <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name"> 
@@ -23,7 +33,7 @@
 
                 <button type="submit" class="btn btn-default">Submit</button>
                 <p align="right">
-                <a href="../button.html"><button type="button" class="btn btn-primary">Go To Main</button></a>
+                <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
                 </p>
             </form>
 

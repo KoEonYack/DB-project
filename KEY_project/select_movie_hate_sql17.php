@@ -14,21 +14,31 @@
     <body>
         <div class="container"><br><br>
             <h2>SQL Table</h2>
-            <p>유저는 영화의 상세 정보를 볼 수 있다.
+            <p>유저는 싫어하는 영화를 추가할 수 있다. 
             <br>
-            SELECT * FROM movie_list;
+                STEP1. SELECT * FROM movie_list;
             </p> <hr>
-
+            
             <?php
-                echo "<p>";
                 require('../db_connect.php');
-                require('movie_info_quary.php');
+                session_start();
+                if(!isset($_SESSION['ses_userid'])){
+                    echo "<small>로그인을 해주세요</small>";
+                }
+                else{
+                    echo "<h5> 안녕하세요 ", $_SESSION['ses_userid']  ,"님의 싫어하는 영화를 선택해주세요! </h5><br>";
+                }
+
+                echo "<p>";
+                require('./select_movie_hate_quary_sql17.php');
                 $movie_result = mysqli_query($conn, "SELECT * FROM movie_list");
                 $n = 0;
                 while($movie = mysqli_fetch_array($movie_result)){
+                    # $cp_movie_id = $movie["movie_id"];
+                    # echo $cp_movie_id ;
                   echo '<button type="button"  class="btn btn-default">
                   <span style="font-size:20px">
-                  <a href="movie_info.php?id='
+                  <a href="select_movie_hate_sql17.php?id='
                   .$movie["movie_id"].'
                   "style="text-decoration:none; color:black;">'
                   .$movie["movie_name"].'</a></span></button>  ';

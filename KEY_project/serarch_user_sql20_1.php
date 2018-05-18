@@ -13,17 +13,17 @@
     <body>
         <div class="container"><br><br>
             <?php 
-                # $user = $_POST['username'];
+                $user = $_POST['username'];
 
                 require('../db_connect.php');
-            $result = mysqli_query($conn, "SELECT * FROM user_list");
+                $result = mysqli_query($conn, "SELECT * FROM user_list");
             
                echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
                # echo "<table class='table table-hover' >";
-    
+
+
                 echo 
-                "
-                <tr>
+                "<tr>
                 <th style='text-align:center;'>Name</th>
                 <th style='text-align:center;'>Nick name</th>
                 <th style='text-align:center;'>Email</th>
@@ -43,6 +43,7 @@
                             <td>".$user_phone."</td>  
                             <td> <img src='$user_profile_url' width='500' height='300'> </td>
                               </tr>";   
+                              echo "here";
                         }
                         else{
                             $name = $row["user_name"];
@@ -50,14 +51,28 @@
                             $user_email = "Private";
                             $user_phone = "Private";
                             $user_profile_url = "Private";
+
+                            echo "<tr> 
+                            <td>".$name."</td>  <td>".$nick_name."</td>  <td>".$user_email."</td>  
+                            <td>".$user_phone."</td>  
+                            <td> <img src='$user_profile_url' width='500' height='300'> </td>
+                            </tr>";                               
+                            
                         }
                     }
                 }
                 echo "</table>";
-    
+                if (!$row){
+                    echo "<script>alert('검색 결과가 없습니다.');
+                    history.back();
+                    </script>";
+                }
+                
                 mysqli_close($conn);
             ?>
-            
+            <br><br>
+            <a href="./serarch_user_sql20.php"><button type="button" class="btn btn-primary">Go To Search</button></a>
+            <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
         </div>
     </body>
 </html>
