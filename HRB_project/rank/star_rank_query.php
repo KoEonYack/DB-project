@@ -11,7 +11,7 @@
 
         $start = "START TRASACTION";
         $view = "CREATE VIEW movie_star AS SELECT movie_id,AVG(star_rate) AS star_average FROM user_rating_list GROUP BY movie_id";
-        $select = "SELECT * FROM movie_star INNER JOIN movie_list ON movie_star.movie_id=movie_list.movie_id";
+        $select = "SELECT * FROM movie_star INNER JOIN movie_list ON movie_star.movie_id=movie_list.movie_id ORDER BY star_average DESC";
         $drop = "DROP VIEW movie_star";
         $commit = "COMMIT";
         $rollback = "ROLLBACK";
