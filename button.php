@@ -42,21 +42,26 @@
                     }
                 ?>
                 <a href="./MCK_project/initial_rating.php"><button type="button" class="btn btn-default">3. 회원가입시 10개의 영화평가 </button></a>
-                <a href="#"><button type="button" class="btn btn-default"> SQL4 </button></a>
-                <a href="KEY_project/Current_screening_sql5.php"><button type="button" class="btn btn-default"> 5. 현재 상영작 </button></a>
+            </p>
+
+            <p>
+                <a href="./HRB_project/rank/spectator_rank.php"><button type="button" class="btn btn-default"> 4-1. 관람객 많은 순으로 보기 </button></a>
+                <a href="./HRB_project/rank/reserve_rank.php"><button type="button" class="btn btn-default"> 4-2. 예매율 높은 순으로 보기 </button></a>
+                <a href="./HRB_project/rank/star_rank.php"><button type="button" class="btn btn-default"> 4-3. 별점평균 높은 순으로 보기 </button></a>
             </p>
     
             <p>
+                <a href="KEY_project/Current_screening_sql5.php"><button type="button" class="btn btn-default"> 5. 현재 상영작 </button></a>    
                 <a href="KEY_project/Before_Release_sql6.php"><button type="button" class="btn btn-default"> 6. 개봉 예정작 </button></a>
                 <a href="KEY_project/movie_info.php"><button type="button" class="btn btn-default"> 7. 영화 기본 정보 보기 </button></a>
                 <a href="./HRB_project/director_info.php"> <button type="button" class="btn btn-default"> 8-1. 감독기본정보 </button></a>
                 <a href="./HRB_project/actor_info.php"><button type="button" class="btn btn-default">8-2. 배우기본정보</button></a>
                 <a href="./HRB_project/movie_rating.php"><button type="button" class="btn btn-default">9. 영화 평가하기</button></a>
-                <a href="./HRB_project/movie_saw.php"><button type="button" class="btn btn-default"> 10-1. 이제까지 본 영화 </button></a>
 
             </p>
 
             <p>
+                <a href="./HRB_project/movie_saw.php"><button type="button" class="btn btn-default"> 10-1. 이제까지 본 영화 </button></a>
                 <a href="./HRB_project/movie_nation.php"><button type="button" class="btn btn-default">10-2. 국가별로 보기</button></a>
                 <a href="./HRB_project/movie_genre.php"><button type="button" class="btn btn-default">10-3. 장르별로 보기</button></a>
                 <button type="button" class="btn btn-default"> SQL11 : 미완성</button>
