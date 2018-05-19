@@ -23,9 +23,9 @@
             else{
                 # echo '싫어하는 영화 목록을 보여줍니다!';
             }
-            require('./hated_movie_query.php');
-            hateMovieList();
-            
+            require('./hated_genre_query.php');
+            movieSawGenreList();
+            genreClick();
         ?>
         <br><br><a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
     </div>

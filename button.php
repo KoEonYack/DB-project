@@ -80,12 +80,12 @@
             </p>
 
             <p>
-                <a href="#"> <button type="button" class="btn btn-default"> 18-3. 관심없는 영화 장르별 보기 </button></a>
+                <a href="./KEY_project/hated_genre.php"> <button type="button" class="btn btn-default"> 18-3. 관심없는 영화 장르별 보기 </button></a>
                 <button type="button" class="btn btn-default"> SQL19 : 미완성</button> 
                 <a href="./KEY_project/serarch_user_sql20.php"><button type="button" class="btn btn-default"> SQL20 : 유저 검색 </button></a>
                 <button type="button" class="btn btn-default"> SQL21 : 미완성 </button> 
-
             </p>
+
             <p>
                 <a href="./HRB_project/best_comment.php"><button type="button" class="btn btn-default"> 22. 최고 코멘트와 받은 좋아요 수 </button></a>
                 <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
@@ -102,6 +102,7 @@
             <p>
                 <a href="./KEY_project/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>
             </p>
+            
             <br><br><br><br>
             <a href="index.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
         </div>
