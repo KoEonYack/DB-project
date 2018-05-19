@@ -12,8 +12,8 @@
     <div class="container"><br><br>
         <?php
             require('betweenUser_rating_query.php');
-            userList();
-            userClick();
+            betweenUserList();
+            betweenUserClick();
         ?>
         <br><br><a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
     </div>

@@ -89,7 +89,8 @@
             <p>
                 <a href="./MCK_project/search_user.php"><button type="button" class="btn btn-default"> 28. 다른 사용자 검색 </button></a>
                 <a href="./MCK_project/betweenUser_rating.php"><button type="button" class="btn btn-default"> 29. 다른 사용자와의 평가</button></a>
-                <button type="button" class="btn btn-default"> SQL13 : 미완성</button> 
+                <a href="./MCK_project/recommend_genre.php"><button type="button" class="btn btn-default"> 30-1. 장르 기준 추천 영화 </button></a>
+                <a href="./MCK_project/recommend_nation.php"><button type="button" class="btn btn-default"> 30-2. 국가 기준 추천 영화 </button></a>
             </p>
 
             
