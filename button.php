@@ -48,6 +48,7 @@
                 <a href="./HRB_project/rank/spectator_rank.php"><button type="button" class="btn btn-default"> 4-1. 관람객 많은 순으로 보기 </button></a>
                 <a href="./HRB_project/rank/reserve_rank.php"><button type="button" class="btn btn-default"> 4-2. 예매율 높은 순으로 보기 </button></a>
                 <a href="./HRB_project/rank/star_rank.php"><button type="button" class="btn btn-default"> 4-3. 별점평균 높은 순으로 보기 </button></a>
+                <a href="./HRB_project/rank/comment_rank.php"><button type="button" class="btn btn-default"> 4-4. 댓글 수 많은 순으로 보기 </button></a>
             </p>
     
             <p>
