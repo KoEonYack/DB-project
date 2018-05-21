@@ -14,7 +14,7 @@
         $follower_result = mysqli_query($conn, $follower_sql);
         $follower = mysqli_fetch_array($follower_result);
 
-        echo ' '
+        echo ' ' 
         .$follower["user_name"]. ' ';
 
       }
