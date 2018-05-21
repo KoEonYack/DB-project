@@ -97,6 +97,7 @@
                 <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
                 <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
                 <a href="./HRB_project/star_info.php"><button type="button" class="btn btn-default"> 24. 별점 평균과 가장 많이 준 별점 </button></a>
+                <a href="./ESK_project/user_prefrence_tag.php"><button type="button" class="btn btn-default"> 25. 선호 태그 조회 </button></a>
             </p>
             <p>
                 <a href="./MCK_project/search_user.php"><button type="button" class="btn btn-default"> 28. 다른 사용자 검색 </button></a>
@@ -106,6 +107,9 @@
             </p>
 
             
+            <p>
+                <a href="./ESK_project/user_following.php"><button type="button" class="btn btn-default"> 27. 팔로잉 리스트 팔로워 리스트 조회 </button></a>
+            </p>
             <p>
                 <a href="./KEY_project/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>
             </p>
