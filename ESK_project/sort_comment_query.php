@@ -18,7 +18,8 @@
         $follower = mysqli_fetch_array($follower_result);
 
         echo '<p> comment : ' 
-        .$comment["contents"]. '</p>';
+        .$comment["contents"]. ' writing time : '
+        .$comment["writing_time"].'</p>';
 
       }
       echo '</div>';
