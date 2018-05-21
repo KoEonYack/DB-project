@@ -55,7 +55,7 @@
             global $conn;
             $user_name= $_SESSION['ses_userid'];
             $user_id = $_SESSION['userlist_id'];
-            // 영화제목을 출력해야 하므로 가져온다.
+            // 댓글을 출력해야 하므로 가져온다.
             $sql = "SELECT * FROM comment_list WHERE comment_id=".$_GET['comment_id'];
 //            echo '<h4>선택한 영화의 댓글 가져오기 : '.$sql.'</h4>';
             $result = mysqli_query($conn,$sql);

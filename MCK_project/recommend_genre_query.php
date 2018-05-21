@@ -13,7 +13,7 @@
       FROM user_rating_list A 
       left JOIN movie_genre_list B on A.movie_id = B.movie_id 
       left JOIN genre_list C on B.genre_id = C.genre_id 
-      WHERE userlist_id=1 and star_rate >3
+      WHERE userlist_id=$user_id and star_rate >3
       ";
 
       echo '<h4>사용자가 높게 평가한 영화들의 장르: '.$genre_sql.'</h4><hr>';

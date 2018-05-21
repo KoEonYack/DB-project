@@ -15,6 +15,8 @@
 
     //아이디 중복검사.
     $sql = "SELECT * FROM user_list WHERE nick_name = '{$memberId}'";
+
+    
     $res = $conn->query($sql);
     //var_dump($res);
     if($res->num_rows >= 1){

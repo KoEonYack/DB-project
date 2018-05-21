@@ -25,7 +25,7 @@
         "SELECT DISTINCT B.movie_name 
         FROM user_rating_list A 
         left JOIN movie_list B on A.movie_id = B.movie_id 
-        WHERE userlist_id!=1 and star_rate >4 and B.nation='한국'
+        WHERE userlist_id!=1 and star_rate >4 and B.nation='{$nation['nation']}'
         ";
 
         echo '<br><h4>'.$user_name.'님께서 높게 평가한 영화의 국가 "'.$nation['nation'].'" 중에서 다른 사용자들이 높게 평가한 영화 </br>: '.$movie_nation_sql.'</h4>';
