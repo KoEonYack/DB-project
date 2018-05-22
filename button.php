@@ -65,9 +65,9 @@
                 <a href="./HRB_project/movie_saw.php"><button type="button" class="btn btn-default"> 10-1. 이제까지 본 영화 </button></a>
                 <a href="./HRB_project/movie_nation.php"><button type="button" class="btn btn-default">10-2. 국가별로 보기</button></a>
                 <a href="./HRB_project/movie_genre.php"><button type="button" class="btn btn-default">10-3. 장르별로 보기</button></a>
-                <button type="button" class="btn btn-default"> SQL11 : 미완성</button>
+                <a href="./ESK_project/write_comment.php"><button type="button" class="btn btn-default"> 11. 코멘트 작성하기 </button></a>
                 <button type="button" class="btn btn-default"> SQL12 : 미완성</button> 
-                <button type="button" class="btn btn-default"> SQL13 : 미완성</button> 
+                <a href="./ESK_project/sort_comment.php"><button type="button" class="btn btn-default"> 13. 코멘트 보기 </button></a>
             </p>
 
             <p>
@@ -100,6 +100,7 @@
                 <a href="./ESK_project/user_prefrence_tag.php"><button type="button" class="btn btn-default"> 25. 선호 태그 조회 </button></a>
             </p>
             <p>
+                <a href="./ESK_project/user_follow_insert.php"><button type="button" class="btn btn-default"> 26. 팔로우 추가하기 </button></a>
                 <a href="./ESK_project/user_following.php"><button type="button" class="btn btn-default"> 27. 팔로잉 리스트 팔로워 리스트 조회 </button></a>
                 <a href="./MCK_project/search_user.php"><button type="button" class="btn btn-default"> 28. 다른 사용자 검색 </button></a>
                 <a href="./MCK_project/betweenUser_rating.php"><button type="button" class="btn btn-default"> 29. 다른 사용자와의 평가</button></a>
