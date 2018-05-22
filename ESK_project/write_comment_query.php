@@ -39,7 +39,16 @@
             $result = mysqli_query($conn,$sql);
             $movie = mysqli_fetch_array($result);
 
-            rateForm($user_id, $user_name, $_GET['id'],$movie['movie_name'],'new_rating');
+            echo '<br><span style="font-size:35px"> '.$movie["movie_name"].'</span>';
+           // 영화제목을 출력해야 하므로 가져온다.
+            $sql = "SELECT * FROM comment_list WHERE movie_id=".$_GET['movie_id'];
+            echo '<p>댓글 표시 : '.$sql.'</p>';
+            $result = mysqli_query($conn,$sql);
+            //  $comment = mysqli_fetch_array($result);
+            while($comment = mysqli_fetch_array($result)){
+              echo '<p>content : ' . $comment["contents"]. '</p>';
+            }
+            // rateForm($user_id, $user_name, $_GET['id'],$movie['movie_name'],'new_rating');
       }
     }
 
