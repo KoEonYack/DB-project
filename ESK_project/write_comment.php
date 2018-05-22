@@ -12,7 +12,10 @@
         <div class="container"><br><br>
             <?php
                 require('write_comment_query.php');
+                movieList();
+                movieClick();
                 writeComment();
+                //INSERT INTO `comment_list` (`contents`,`userlist_id`,`movie_id`, `writing_time`,`parent_comment_id`) VALUES('코멘트다',1,1,20180506,-1)
             ?>
             <br>
             <br><a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>

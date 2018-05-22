@@ -13,10 +13,6 @@
       $comment_result = mysqli_query($conn, $comment_sql);
       echo '<div class="list-group" style="display:inline-block;">';
       while($comment = mysqli_fetch_array($comment_result)){
-        $follower_sql = "SELECT * FROM user_list WHERE userlist_id={$user['follower_id']}; " ;
-        $follower_result = mysqli_query($conn, $follower_sql);
-        $follower = mysqli_fetch_array($follower_result);
-
         echo '<p> comment : ' 
         .$comment["contents"]. ' writing time : '
         .$comment["writing_time"].'</p>';
