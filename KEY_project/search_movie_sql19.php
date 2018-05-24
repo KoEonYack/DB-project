@@ -32,7 +32,7 @@
             <form role="form" action="search_movie_sql19_1.php" method="POST"  > 
                 <div class="form-group"> 
                     <label for="username">영화 제목 기준 검색</label> 
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter movie name"> 
+                    <input type="text" class="form-control" id="moviename" name="moviename" placeholder="Enter movie name"> 
                 </div> 
 
                 <button type="submit" class="btn btn-default">Submit</button>

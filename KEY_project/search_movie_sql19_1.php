@@ -13,53 +13,57 @@
     <body>
         <div class="container"><br><br>
             <?php 
-                $user = $_POST['username'];
-                $flag = 0;
-
-                session_start();
-                $session_id = $_SESSION['userlist_id'];
-                # echo $session_id;
-
                 require('../db_connect.php');
-                $result = mysqli_query($conn, "SELECT * FROM user_list");
-            
-               echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
-               # echo "<table class='table table-hover' >";
+                $moviename = "%".$_POST['moviename']."%";
+                $flag = 0;
+                echo $moviename;
+                $result = mysqli_query($conn, "SELECT * FROM movie_list WHERE movie_name LIKE '$moviename' ");
+
+                #$temp_findcategory = $_POST['findcategory']; 
+                #$temp_findkeyword = "%".$_POST['findkeyword']."%";
+                #$search = mysqli_query($conn,"SELECT * FROM table WHERE field1 like '$temp_findkeyword' order by '$temp_findcategory' asc"); 
 
 
+                echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
                 echo 
                 "<tr>
-                <th style='text-align:center;'>Name</th>
-                <th style='text-align:center;'>Nick name</th>
-                <th style='text-align:center;'>Email</th>
-                <th style='text-align:center;'>Phone</th>
-                <th style='text-align:center;'>profile url</th>
+                    <th style='text-align:center;'> 영화 제목 </th>
+                    <th style='text-align:center;'> 영어 제목 </th>
+                    <th style='text-align:center;'> 개봉년도 </th>
+                    <th style='text-align:center;'> 개봉 국가 </th>
+                    <th style='text-align:center;'> 사이트 주소 </th>
+                    <th style='text-align:center;'> 언어 </th>
+                    <th style='text-align:center;'> 상영등급 </th>
+                    <th style='text-align:center;'> 제작사 </th>
                 </tr>";
 
                 while( $row = mysqli_fetch_array($result) ){
-                    if ( $row["user_name"] == $user ){ // 입력 받은 유저하고 디비에 있는 유저
-                        if( $row["open_range"] == "all" ){
-                            $name = $row["user_name"];
-                            $nick_name = $row["nick_name"]; 
-                            $user_email = $row["user_email"];
-                            $user_phone = $row["user_phone"];
-                            $user_profile_url = $row["user_profile_url"];
-                            echo "<tr> <td>".$name."</td>  <td>".$nick_name."</td>  <td>".$user_email."</td>  
-                            <td>".$user_phone."</td>  
-                            <td> <img src='$user_profile_url' width='500' height='300'> </td>
-                            </tr>";
-                            $flag = 1;
-                        }
-                    }
+
+                    $movie_name = $row["movie_name"];
+                    $english_name = $row["english_name"]; 
+                    $release_date = $row["release_date"];
+                    $nation = $row["nation"];
+                    $site_url = $row["site_url"];
+                    $language = $row["language"];
+                    $rating_certification = $row["rating_certification"];
+                    $studio_name = $row["studio_name"];
+
+                    echo "<tr> <td>".$movie_name."</td>  <td>".$english_name."</td>  <td>".$release_date."</td>  
+                    <td>".$nation."</td>  <td>".$site_url."</td>  <td>".$language."</td>  
+                    <td>".$rating_certification."</td>  <td>".$studio_name."</td>  
+                    </tr>";
+                    $flag = 1;
+       
                 }
                 echo "</table>";
                 
+/*
                 if ($flag==0){
                     echo "<script>alert('검색 결과가 없습니다.');
                     history.back();
                     </script>";
                 }
-                
+  */              
                 mysqli_close($conn);
             ?>
             <br><br>
