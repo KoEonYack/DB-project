@@ -27,12 +27,12 @@
 
         <div class="container"><br><br>
         <h2>SQL Senario</h2>
-        <p>The user can search for the user registered on this homepage.</p>
+        <p> 유저는 영화 정보를 검색 할 수 있다. </p>
         <hr>
-            <form role="form" action="serarch_user_sql20_1.php" method="POST"  > 
+            <form role="form" action="search_movie_sql19_1.php" method="POST"  > 
                 <div class="form-group"> 
-                    <label for="username">Search user name</label> 
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name"> 
+                    <label for="username">영화 제목 기준 검색</label> 
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter movie name"> 
                 </div> 
 
                 <button type="submit" class="btn btn-default">Submit</button>
