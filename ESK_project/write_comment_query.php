@@ -6,7 +6,7 @@
         global $conn;
         $sql = "SELECT * from movie_list ";
         $result = mysqli_query($conn, $sql);
-        echo '<h1>/"'.$_SESSION['ses_userid'].'/"원하는 영화의 코멘트 보기.</h1><p>';
+        echo '<h1>'.$_SESSION['ses_userid'].'원하는 영화의 코멘트 보기</h1><p>';
         echo '<h1>:'.$sql.'</h1><p>';
 
         $n=0;
