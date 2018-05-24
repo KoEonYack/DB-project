@@ -29,7 +29,6 @@
       $user_id = $_SESSION['userlist_id'];
       if(isset($_GET['id'])){
         // 사용자가 본 영화의 genre_id를 뽑아내는 쿼리
-        // user_rating_list와 movie_genre_list를 movie_id 기준으로 JOIN 시켜서 USER가 본 영화들이 어떤 장르에 속하는지 알아낸다.
       $movie_genre_sql = "SELECT * FROM movie_genre_list WHERE `movie_id` IN (SELECT `movie_id` FROM `user_want_list` WHERE `userlist_id`=$user_id)";
 
         echo '<h4> 사용자가 보기 원했던 영화 중에서: '.$movie_genre_sql.'</h4>';
