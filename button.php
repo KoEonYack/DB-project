@@ -109,7 +109,7 @@
 
             
             <p>
-                <a href="./KEY_project/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>
+                <a href="./Admin/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>
             </p>
             
             <br><br><br><br>

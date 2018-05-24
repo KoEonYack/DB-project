@@ -16,13 +16,12 @@
                 require('../db_connect.php');
                 $moviename = "%".$_POST['moviename']."%";
                 $flag = 0;
-                echo $moviename;
+
                 $result = mysqli_query($conn, "SELECT * FROM movie_list WHERE movie_name LIKE '$moviename' ");
 
                 #$temp_findcategory = $_POST['findcategory']; 
                 #$temp_findkeyword = "%".$_POST['findkeyword']."%";
                 #$search = mysqli_query($conn,"SELECT * FROM table WHERE field1 like '$temp_findkeyword' order by '$temp_findcategory' asc"); 
-
 
                 echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
                 echo 
@@ -57,17 +56,17 @@
                 }
                 echo "</table>";
                 
-/*
+
                 if ($flag==0){
                     echo "<script>alert('검색 결과가 없습니다.');
                     history.back();
                     </script>";
                 }
-  */              
+  
                 mysqli_close($conn);
             ?>
             <br><br>
-            <a href="./serarch_movie_sql19.php"><button type="button" class="btn btn-primary">Go To Search</button></a>
+            <a href="./search_movie_sql19.php"><button type="button" class="btn btn-primary">Go To Search</button></a>
             <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
         </div>
     </body>
