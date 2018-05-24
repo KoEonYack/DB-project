@@ -50,39 +50,9 @@
                             </tr>";
                             $flag = 1;
                         }
-                        else if(  $row["open_range"] == "followers" ){
-                            echo "here";
-                            echo $session_id;
-                            echo $_SESSION['userlist_id'];
-                            // 로그인한 ID = 팔로우 ID follower_id
-
-                            
-                            // SELECT * FROM `follower_list` WHERE userlist_id = 3 AND follower_id = 20
-                            // $followersList = mysqli_query($conn, "SELECT * FROM follower_list WHERE userlist_id =".$_SESSION['userlist_id']."AND follower_id =".$follower_id.")";
-                            // $follower_id = $row["follower_id"];
-                            // echo $follower_id;                            
-                            
-                            /*
-                            echo followersList;
-                            */
-                            $flag = 1;
-                        }
-                        else if ( $row["open_range"] == "none"  ){
-                            $name = $row["user_name"];
-                            $nick_name = "Private"; 
-                            $user_email = "Private";
-                            $user_phone = "Private";
-                            $user_profile_url = "Private";
-
-                            echo "<tr> 
-                            <td>".$name."</td>  <td>".$nick_name."</td>  <td>".$user_email."</td>  
-                            <td>".$user_phone."</td><td>".$user_profile_url."</td></tr>";          
-                            $flag = 1;                     
-                        }   
                     }
                 }
                 echo "</table>";
-
                 
                 if ($flag==0){
                     echo "<script>alert('검색 결과가 없습니다.');
@@ -90,11 +60,10 @@
                     </script>";
                 }
                 
-                
                 mysqli_close($conn);
             ?>
             <br><br>
-            <a href="./serarch_user_sql20.php"><button type="button" class="btn btn-primary">Go To Search</button></a>
+            <a href="./serarch_movie_sql19.php"><button type="button" class="btn btn-primary">Go To Search</button></a>
             <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
         </div>
     </body>

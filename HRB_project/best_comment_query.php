@@ -9,6 +9,13 @@
         echo '<h4>'.$comment_sql.'</h4>';
         $comment_result = mysqli_query($conn, $comment_sql);
 
+        $long_sql = "SELECT contents FROM comment_list 
+        INNER JOIN (SELECT MAX(like_num) AS best 
+        FROM (SELECT COUNT(likes.comment_id) AS like_num 
+        FROM comment_like_list likes 
+        INNER JOIN comment_list comment ON likes.comment_id=comment.comment_id 
+        WHERE comment.userlist_id=1 GROUP BY comment.comment_id) AS best_like) best_comment ON comment_list.comment_id=best_comment.best;";
+        
         // 총 좋아요 개수와 최고 코멘트를 알아내기 위한 연관 배열 선언
         $like_num_list;
         $best_comment_list;
@@ -34,6 +41,8 @@
         echo '<h4>'.$contents_sql.'</h4>';
         $contents_result = mysqli_query($conn, $contents_sql);
         $contents = mysqli_fetch_array($contents_result);
+
+        echo '<h4>'.$long_sql.'</h4>';
 
         echo '<br><span style="font-size:20px">
         최고 코멘트 : '.$contents['contents'].'</span>';

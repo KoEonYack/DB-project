@@ -22,7 +22,7 @@
       if(isset($_GET['id'])){
         $movie_nation_sql =
         "SELECT m.movie_id, movie_name FROM movie_list m
-        LEFT JOIN user_rating_list u
+        INNER JOIN user_rating_list u
         ON m.movie_id=u.movie_id
         WHERE u.userlist_id={$user_id} AND m.nation='{$_GET['id']}';";
         echo '<h4>'.$movie_nation_sql.'</h4>';

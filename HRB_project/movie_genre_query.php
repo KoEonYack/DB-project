@@ -29,7 +29,7 @@
         // user_rating_list와 movie_genre_list를 movie_id 기준으로 JOIN 시켜서 USER가 본 영화들이 어떤 장르에 속하는지 알아낸다.
         $movie_genre_sql =
         "SELECT u.movie_id,m.genre_id FROM user_rating_list u
-        LEFT JOIN movie_genre_list m
+        INNER JOIN movie_genre_list m
         ON u.movie_id=m.movie_id
         WHERE u.userlist_id=1";
 

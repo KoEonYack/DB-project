@@ -11,7 +11,7 @@
 
         $movie_sql = 
         "SELECT m.movie_name FROM movie_list m 
-        LEFT JOIN movie_actor_list ma ON m.movie_id=ma.movie_id
+        INNER JOIN movie_actor_list ma ON m.movie_id=ma.movie_id
         WHERE ma.actor_id=".$actor['actor_id'];
 
         $result = mysqli_query($conn, $movie_sql);
