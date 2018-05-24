@@ -13,14 +13,18 @@
     <body>
         <?php     
             session_start();
+            $session_id = $_SESSION['userlist_id'];
+            # echo $session_id;
             if(!isset($_SESSION['ses_userid'])){
                 echo
                 '<script>
                     alert("로그인을 해주세요");
                     document.location.href="../button.php"; 
                 </script>';
+                
             }
         ?>
+
         <div class="container"><br><br>
         <h2>SQL Senario</h2>
         <p>The user can search for the user registered on this homepage.</p>

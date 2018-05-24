@@ -14,6 +14,11 @@
         <div class="container"><br><br>
             <?php 
                 $user = $_POST['username'];
+                $flag = 0;
+
+                session_start();
+                $session_id = $_SESSION['userlist_id'];
+                # echo $session_id;
 
                 require('../db_connect.php');
                 $result = mysqli_query($conn, "SELECT * FROM user_list");
@@ -33,7 +38,7 @@
 
                 while( $row = mysqli_fetch_array($result) ){
                     if ( $row["user_name"] == $user ){ // 입력 받은 유저하고 디비에 있는 유저
-                        if( $row["open_range"] == "all" || $row["open_range"] == "followers" ){
+                        if( $row["open_range"] == "all" ){
                             $name = $row["user_name"];
                             $nick_name = $row["nick_name"]; 
                             $user_email = $row["user_email"];
@@ -42,10 +47,27 @@
                             echo "<tr> <td>".$name."</td>  <td>".$nick_name."</td>  <td>".$user_email."</td>  
                             <td>".$user_phone."</td>  
                             <td> <img src='$user_profile_url' width='500' height='300'> </td>
-                              </tr>";   
-                              echo "here";
+                            </tr>";
+                            $flag = 1;
                         }
-                        else{
+                        else if(  $row["open_range"] == "followers" ){
+                            echo "here";
+                            echo $session_id;
+                            echo $_SESSION['userlist_id'];
+                            // 로그인한 ID = 팔로우 ID follower_id
+
+                            
+                            // SELECT * FROM `follower_list` WHERE userlist_id = 3 AND follower_id = 20
+                            // $followersList = mysqli_query($conn, "SELECT * FROM follower_list WHERE userlist_id =".$_SESSION['userlist_id']."AND follower_id =".$follower_id.")";
+                            // $follower_id = $row["follower_id"];
+                            // echo $follower_id;                            
+                            
+                            /*
+                            echo followersList;
+                            */
+                            $flag = 1;
+                        }
+                        else if ( $row["open_range"] == "none"  ){
                             $name = $row["user_name"];
                             $nick_name = "Private"; 
                             $user_email = "Private";
@@ -54,19 +76,20 @@
 
                             echo "<tr> 
                             <td>".$name."</td>  <td>".$nick_name."</td>  <td>".$user_email."</td>  
-                            <td>".$user_phone."</td>  
-                            <td> <img src='$user_profile_url' width='500' height='300'> </td>
-                            </tr>";                               
-                            
-                        }
+                            <td>".$user_phone."</td><td>".$user_profile_url."</td></tr>";          
+                            $flag = 1;                     
+                        }   
                     }
                 }
                 echo "</table>";
-                if (!$row){
+
+                
+                if ($flag==0){
                     echo "<script>alert('검색 결과가 없습니다.');
                     history.back();
                     </script>";
                 }
+                
                 
                 mysqli_close($conn);
             ?>
