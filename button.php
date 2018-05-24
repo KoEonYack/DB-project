@@ -95,7 +95,6 @@
             <p>
                 <a href="./HRB_project/best_comment.php"><button type="button" class="btn btn-default"> 22. 최고 코멘트와 받은 좋아요 수 </button></a>
                 <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
-                <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
                 <a href="./HRB_project/star_info.php"><button type="button" class="btn btn-default"> 24. 별점 평균과 가장 많이 준 별점 </button></a>
                 <a href="./ESK_project/user_prefrence_tag.php"><button type="button" class="btn btn-default"> 25. 선호 태그 조회 </button></a>
             </p>
