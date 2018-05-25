@@ -9,7 +9,7 @@
         $sql = "SELECT * FROM movie_list WHERE `movie_id` NOT IN (SELECT `movie_id` FROM user_want_list WHERE `userlist_id` = $user_id)";
 
         $result = mysqli_query($conn, $sql);
-        echo '<h1>/"'.$user_name.'/"님께서 로그인 중.</h1><p>';
+        echo '<h1>'.$user_name.'님께서 로그인 중.</h1><p>';
         echo '<h1>평가하지 않은 영화들 :'.$sql.'</h1><p>';
 
         $n=0;
