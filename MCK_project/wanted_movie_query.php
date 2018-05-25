@@ -13,10 +13,8 @@
       echo '<h5>보고 싶다고 선택한 영화들입니다.</h5><p>';
       echo '<hr>';
       $movie_result = mysqli_query($conn, $user_sql);
-      var_dump($movie_result); 
       echo '<div class="list-group" style="display:inline-block;">';
       while($movie = mysqli_fetch_array($movie_result)){
-        echo $movie["movie_id"];
         echo '<a href="../KEY_project/movie_info.php?id='
         .$movie["movie_id"].'" class="list-group-item list-group-item-action" style="text-decoration:none; color:black;">'
         .$movie["movie_name"].'</a>';

@@ -13,14 +13,14 @@
     <body>
     <div class="container">
         <h2>SQL Table</h2>
-        <p>영화 Revenue DEC 순으로 정렬
+        <p>영화 Revenue DESC 순으로 정렬
         <br>
-        SELECT * FROM movie_list ORDER BY CAST(revenue AS UNSIGNED) DESC
+        SELECT * FROM movie_list ORDER BY revenue DESC
         </p>
 
         <?php
             require('../db_connect.php');
-            $result = mysqli_query($conn, "SELECT * FROM movie_list ORDER BY CAST(revenue AS UNSIGNED) DESC");
+            $result = mysqli_query($conn, "SELECT * FROM movie_list ORDER BY revenue DESC");
 
            echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
            # echo "<table class='table table-hover' >";

@@ -10,11 +10,25 @@
     </head>
     <body>
         <div class="container"><br><br>
+            <?php     
+                session_start();
+                $session_id = $_SESSION['userlist_id'];
+                # echo $session_id;
+                if(!isset($_SESSION['ses_userid'])){
+                    echo
+                    '<script>
+                        alert("로그인을 해주세요");
+                        document.location.href="../button.php"; 
+                    </script>';
+                    
+                }
+            ?>
             <?php
                 require('write_comment_query.php');
                 movieList();
                 movieClick();
                 writeComment();
+                // writeCommentData();
                 //INSERT INTO `comment_list` (`contents`,`userlist_id`,`movie_id`, `writing_time`,`parent_comment_id`) VALUES('코멘트다',1,1,20180506,-1)
             ?>
             <br>

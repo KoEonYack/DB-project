@@ -15,12 +15,12 @@
         <h2>SQL Table</h2>
         <p>영화 Revenue ASC 순으로 정렬
         <br>
-            SELECT * FROM movie_list ORDER BY CAST(revenue AS UNSIGNED) ASC
+            SELECT * FROM movie_list ORDER BY revenue ASC
         </p>
 
         <?php
             require('../db_connect.php');
-            $result = mysqli_query($conn, "SELECT * FROM movie_list ORDER BY CAST(revenue AS UNSIGNED) ASC");
+            $result = mysqli_query($conn, "SELECT * FROM movie_list ORDER BY revenue ASC");
 
            echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
            # echo "<table class='table table-hover' >";

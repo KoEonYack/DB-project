@@ -13,14 +13,12 @@
     <body>
     <div class="container">
         <h2>SQL Table</h2>
-        <p>When the user presses the "Expected Release" button, movies scheduled for release are displayed.
-        <br>
-        SELECT * FROM movie_list WHERE release_date > 2018;
-        </p>
+        <h5>유저가 상영이 예정된 영화들을 볼 수 있습니다.</h5>
+        <h5>SELECT * FROM movie_list WHERE release_date > (SELECT YEAR(CURDATE()))</h5>
 
         <?php
             require('../db_connect.php');
-            $result = mysqli_query($conn, "SELECT * FROM movie_list WHERE release_date > 2018");
+            $result = mysqli_query($conn, "SELECT * FROM movie_list WHERE release_date > (SELECT YEAR(CURDATE()))");
 
            echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
            # echo "<table class='table table-hover' >";
