@@ -26,6 +26,7 @@
                         echo "<small> 안녕하세요 ", $_SESSION['ses_userid']  ,"님!      </small>";
                     }
                 ?>
+                <a href="index.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
                 </h3>
             </div>
             <hr><br>
@@ -111,9 +112,7 @@
             <p>
                 <a href="./Admin/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>
             </p>
-            
-            <br><br><br><br>
-            <a href="index.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
+
         </div>
     </body>
 </html>
