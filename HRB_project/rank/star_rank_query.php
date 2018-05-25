@@ -41,7 +41,7 @@
                 $star = $row["star_average"];
                 #echo "<tr><td><div>".$id."</div></td><td>".$title."</td><td  style='padding-right:200px;'>".$content."</td></tr>";
                 echo "<tr>  <td>".$rank."</td>  <td>".$title."</td>  <td>".$content."</td>  
-                <td>".$date."</td> <td><strong>".$star."%</strong></td>  </tr>";
+                <td>".$date."</td> <td><strong>".$star."</strong></td>  </tr>";
                 $rank++;
             }
             echo "</table>";
