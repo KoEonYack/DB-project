@@ -82,7 +82,8 @@
 
             <p>
                 <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고싶어요 장르별 보기 </button></a>
-                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17. 관심없어요 체크하기 </button></a> 
+                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17-1. 관심없어요 체크하기 </button></a>
+                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17-2. 관심없어요 삭제하기 </button></a>  
                 <a href="./KEY_project/hated_movie.php"><button type="button" class="btn btn-default"> 18-1. 관심없어요 영화 보기 </button></a>
                 <a href="./KEY_project/hated_nation.php"><button type="button" class="btn btn-default"> 18-2. 관심없어요 영화 국가별 보기 </button></a>
             </p>
