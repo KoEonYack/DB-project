@@ -73,7 +73,8 @@
 
             <p>
                 <a href="./MCK_project/comment_like.php"><button type="button" class="btn btn-default"> 14. 댓글에 좋아요 누르기 </button></a>
-                <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15. 보고싶어요 체크하기 </button></a>
+                <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15-1. 보고싶어요 체크하기 </button></a>
+                <a href="./MCK_project/hopeToSee_remove.php"><button type="button" class="btn btn-default"> 15-2. 보고싶어요 삭제하기 </button></a>
                 <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고 싶은 영화 보기 </button></a>
                 <a href="./MCK_project/wanted_nation.php"><button type="button" class="btn btn-default"> 16-2. 보고 싶은 영화 국가별 보기 </button></a>
 
