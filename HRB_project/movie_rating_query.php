@@ -30,13 +30,13 @@
             // 사용자가 그 영화를 이미 평가했는지 확인
             $sql = "SELECT EXISTS (SELECT * FROM user_rating_list
               WHERE userlist_id={$user_id} AND movie_id={$_GET['id']}) AS rated;";
-            echo '사용자가 이미 평가했는지 확인 : '.$sql.'<p>';
+            echo '<h5>사용자가 이미 평가했는지 확인 <br>'.$sql.'</h5>';
             $result = mysqli_query($conn,$sql);
             $user = mysqli_fetch_array($result);
 
             // 영화제목을 출력해야 하므로 가져온다.
             $sql = "SELECT movie_name FROM movie_list WHERE movie_id=".$_GET['id'];
-            echo '영화제목 표시 : '.$sql.'<p>';
+            echo '<h5>영화제목 표시 : '.$sql.'</h5>';
             $result = mysqli_query($conn,$sql);
             $movie = mysqli_fetch_array($result);
 
@@ -52,7 +52,7 @@
     function alreadyRated($user_id, $movie_id, $movie_name){
         global $conn;
         $sql = "SELECT star_rate FROM user_rating_list WHERE userlist_id={$user_id} AND movie_id={$movie_id};";
-        echo '재평가한 경우 몇점인지 : '.$sql.'<p>';
+        echo '<h5>재평가한 경우 몇점인지 : '.$sql.'</h5>';
         $result = mysqli_query($conn,$sql);
         $user = mysqli_fetch_array($result);
         echo '<h4>이미 "'.$movie_name.'"을 '.$user["star_rate"].'점으로 평가하셨습니다.';
