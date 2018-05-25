@@ -4,6 +4,7 @@
     function movieSawNationList(){
       global $conn;
       echo '<br><span style="font-size:35px"><국가별로 보기></span><br>';
+      echo '<h4>DISTINCT를 쓰는 이유는 국가가 많지 않기 때문에 영화와 국가 사이의 <br>aggregation table을 쓰지 않아서, 중복을 피하기 위함이다.';
       $nation_sql = "SELECT DISTINCT nation FROM movie_list";
       echo '<h4>'.$nation_sql.'</h4><hr>';
       $nation_result = mysqli_query($conn, $nation_sql);
