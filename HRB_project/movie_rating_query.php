@@ -26,7 +26,7 @@
       //id에 대해 GET으로 받은 변수가 존재할 때
         if(isset($_GET['id'])){
             global $conn;
-            $user_id=1;
+            $user_id=$_SESSION['userlist_id'];
             // 사용자가 그 영화를 이미 평가했는지 확인
             $sql = "SELECT EXISTS (SELECT * FROM user_rating_list
               WHERE userlist_id={$user_id} AND movie_id={$_GET['id']}) AS rated;";

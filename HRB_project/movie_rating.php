@@ -12,6 +12,7 @@
         <div class="container"><br><br>
             <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>
             <?php
+                session_start();
                 require('movie_rating_query.php');
                 movieList();
                 movieClick();
