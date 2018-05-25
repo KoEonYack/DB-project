@@ -76,7 +76,7 @@
     }
     
     function writeComment(){
-      if(isset($_GET['movie_id'])){
+      if(isset($_GET['movie_id'])&&isset($_GET['comment_id'])){
         global $conn;
         $user_name= $_SESSION['ses_userid'];
         $user_id = $_SESSION['userlist_id'];
