@@ -9,8 +9,9 @@
             <th style='text-align:center;'>Spectator</th>    
             </tr>";
 
-        echo '<h5>cumulative_audience(누적관객) 기준으로 내림차순 정렬하였고 타입이 문자열이라 <br>CAST 쿼리를 써야 해서 배울 수 있었습니다.</h5>';
-        $sql = "SELECT * FROM movie_list ORDER BY CAST(cumulative_audience AS UNSIGNED) DESC";
+        echo '<h5>처음에 데이터를 string으로 넣는 바람에 CAST 함수에 대해서 배울 수 있었습니다.</h5>';
+        echo '<h5>이후 다시 int로 변경해서, cumulative_audience(누적관객) 기준으로 내림차순 정렬하였습니다.</h5>';
+        $sql = "SELECT * FROM movie_list ORDER BY cumulative_audience DESC";
         echo '<h5>'.$sql.'</h5>';
         $result = mysqli_query($conn, $sql);
         $rank = 1;
