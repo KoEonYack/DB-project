@@ -5,9 +5,9 @@
     
     function showTag(){
       global $conn;
-      $user_id = 1;
-      // $user_name= $_SESSION['ses_userid'];
-      // $user_id = $_SESSION['userlist_id'];
+      // $user_id = 1;
+      $user_name= $_SESSION['ses_userid'];
+      $user_id = $_SESSION['userlist_id'];
       $user_sql = "SELECT * FROM userlist WHERE userlist_id={$user_id}";
       echo '<h1>'.$user_sql.'</h1>';
       echo '<br><h2> 유저의 선호 태그 입니다. 평점 4.0 이상 준 영화를 기준으로 작성되었습니다. </h2><p>';

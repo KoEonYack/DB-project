@@ -10,6 +10,19 @@
     </head>
     <body>
         <div class="container"><br><br>
+            <?php     
+                session_start();
+                $session_id = $_SESSION['userlist_id'];
+                # echo $session_id;
+                if(!isset($_SESSION['ses_userid'])){
+                    echo
+                    '<script>
+                        alert("로그인을 해주세요");
+                        document.location.href="../button.php"; 
+                    </script>';
+                    
+                }
+            ?>
             <?php
                 require('user_following_query.php');
                 showFollower();

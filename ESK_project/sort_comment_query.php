@@ -3,8 +3,8 @@
     // 팔로워를 출력하는 함수
     function showComment(){
       global $conn;
-      $user_id = 14;
-      // $user_id = $_SESSION['userlist_id'];
+
+      $user_id = $_SESSION['userlist_id'];
       $user_name= $_SESSION['ses_userid'];
       $comment_sql = "SELECT * FROM comment_list WHERE userlist_id={$user_id} ORDER BY writing_time";
       echo '<h1>'.$comment_sql.'</h1>';

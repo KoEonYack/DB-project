@@ -3,8 +3,8 @@
     // 팔로워를 출력하는 함수
     function showFollower(){
       global $conn;
-      $user_id = 1;
-      // $user_id = $_SESSION['userlist_id'];
+      // $user_id = 1;
+      $user_id = $_SESSION['userlist_id'];
       $user_name= $_SESSION['ses_userid'];
       $user_sql = "SELECT * FROM follower_list WHERE userlist_id={$user_id}";
       echo '<br><h2>'.$user_name. ' 유저의 following list 입니다. </h2><p>';
@@ -22,9 +22,9 @@
       }
       echo '</div>';
       echo '<br><br><br>';
-      $user_id = 1;
-      // $user_id = $_SESSION['userlist_id'];
-      // $user_name= $_SESSION['ses_userid'];
+      // $user_id = 1;
+      $user_id = $_SESSION['userlist_id'];
+      $user_name= $_SESSION['ses_userid'];
       $user_sql = "SELECT * FROM follower_list WHERE follower_id={$user_id}";
       echo '<br><h2>'.$user_name. ' 유저의 follower list 입니다. </h2><p>';
       echo '<h4>'.$user_sql.'</h1>';
