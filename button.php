@@ -75,20 +75,20 @@
                 <a href="./MCK_project/comment_like.php"><button type="button" class="btn btn-default"> 14. 댓글에 좋아요 누르기 </button></a>
                 <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15-1. 보고싶어요 체크하기 </button></a>
                 <a href="./MCK_project/hopeToSee_remove.php"><button type="button" class="btn btn-default"> 15-2. 보고싶어요 삭제하기 </button></a>
-                <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고 싶은 영화 보기 </button></a>
-                <a href="./MCK_project/wanted_nation.php"><button type="button" class="btn btn-default"> 16-2. 보고 싶은 영화 국가별 보기 </button></a>
+                <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고싶어요 영화 보기 </button></a>
+                <a href="./MCK_project/wanted_nation.php"><button type="button" class="btn btn-default"> 16-2. 보고싶어요 국가별 보기 </button></a>
 
             </p>
 
             <p>
-                <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고 싶은 영화 장르별 보기 </button></a>
-                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17. 관심없는 영화 추가 </button></a> 
-                <a href="./KEY_project/hated_movie.php"><button type="button" class="btn btn-default"> 18-1. 관심없는 영화 보기 </button></a>
-                <a href="./KEY_project/hated_nation.php"><button type="button" class="btn btn-default"> 18-2. 관심없는 영화 국가별 보기 </button></a>
+                <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고싶어요 장르별 보기 </button></a>
+                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17. 관심없어요 체크하기 </button></a> 
+                <a href="./KEY_project/hated_movie.php"><button type="button" class="btn btn-default"> 18-1. 관심없어요 영화 보기 </button></a>
+                <a href="./KEY_project/hated_nation.php"><button type="button" class="btn btn-default"> 18-2. 관심없어요 영화 국가별 보기 </button></a>
             </p>
 
             <p>
-                <a href="./KEY_project/hated_genre.php"> <button type="button" class="btn btn-default"> 18-3. 관심없는 영화 장르별 보기 </button></a>
+                <a href="./KEY_project/hated_genre.php"> <button type="button" class="btn btn-default"> 18-3. 관심없어요 영화 장르별 보기 </button></a>
                 <a href="./KEY_project/search_movie_sql19.php"><button type="button" class="btn btn-default"> SQL19 : 영화 검색 </button></a>
                 <a href="./KEY_project/serarch_user_sql20.php"><button type="button" class="btn btn-default"> SQL20 : 유저 검색 </button></a>
                 <button type="button" class="btn btn-default"> SQL21 : 미완성 </button> 
