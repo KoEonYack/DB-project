@@ -32,7 +32,7 @@
             <hr><br>
 
             <p>
-                <a href="./MCK_project/member/signUpForm.php"><button type="button" class="btn btn-default"> 1. Sign UP </button></a>
+                <a href="./MCK_project/member/signUpForm.php"><button type="button" class="btn btn-default"> 1. 회원가입 </button></a>
                 <?php
                     session_start();
                     if(!isset($_SESSION['ses_userid'])){
