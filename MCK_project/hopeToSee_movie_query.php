@@ -22,42 +22,20 @@
           $n++;
           if($n%5===0) echo '</p><p>';
         }
-        if(isset($_POST['name']) && isset($_POST['check'])){
-          echo '<h4>'.$_POST['name'].'을 보고싶은 영화로'.$_POST['check'].'하셨습니다.. </h4>';
-        }
     }
 
     // 사용자가 영화를 클릭했을 때
     function movieClick(){
-      //id에 대해 GET으로 받은 변수가 존재할 때
-        if(isset($_GET['id'])){
-            global $conn;
-            $user_name= $_SESSION['ses_userid'];
-            $user_id = $_SESSION['userlist_id'];
-            // 영화제목을 출력해야 하므로 가져온다.
-            $sql = "SELECT movie_name FROM movie_list WHERE movie_id=".$_GET['id'];
-            echo '<h4>영화제목 표시 : '.$sql.'</h4>';
-            $result = mysqli_query($conn,$sql);
-            $movie = mysqli_fetch_array($result);
-            rateForm($user_id, $user_name, $_GET['id'], $movie['movie_name']);
-      }
-    }
+      if(isset($_GET['id'])){
+          global $conn;
+          $sql = "INSERT INTO user_want_list VALUES (".$_SESSION['userlist_id'].",".$_GET['id'].")";
+          $result = mysqli_query($conn, $sql);
 
-    // 평가 형식
-    function rateForm($user_id, $user_name, $movie_id, $movie_name){
-        echo '<br><span style="font-size:35px"> '.$movie_name.'</span>';
-        // hidden 타입은 보이지 않게 넘기는 값들.
-        echo '<form action="./hopeToSee_Data.php" method="post">
-        <div class="btn-group" data-toggle="buttons">
-          <label class="btn btn-secondary">
-            <input type="radio" name="check" value="hopeToSee" id="option2" autocomplete="off"> 보고 싶어요
-          </label>
-        </div>
-        <input type="hidden" name="movie_id" value="'.$movie_id.'">
-        <input type="hidden" name="user_id" value="'.$user_id.'">
-        <input type="hidden" name="user_name" value="'.$user_name.'">
-        <input type="hidden" name="movie_name" value="'.$movie_name.'">
-        <br><input class="btn btn-primary" type="submit" value="보고 싶어요!">
-        </form>';
-    }
+          $sql1 = "SELECT movie_name FROM movie_list WHERE movie_id=".$_GET['id'];
+          echo '<h4>'.$sql.'</h4>';
+          $result = mysqli_query($conn, $sql1);
+          $row = mysqli_fetch_array($result);
+          echo '<h5>'.$row["movie_name"].'을(를) 보고싶어요에 담았습니다.</h5>';
+      }
+  }
 ?>
