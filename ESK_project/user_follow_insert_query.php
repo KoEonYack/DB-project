@@ -3,10 +3,10 @@
     // require('./include/session.php');
     // 팔로워를 출력하는 함수
     function showFollower(){
+      $user_name= $_SESSION['ses_userid'];
+      $user_id = $_SESSION['userlist_id'];
       global $conn;
-      $user_id = 1;
-      // $user_name= $_SESSION['ses_userid'];
-      // $user_id = $_SESSION['userlist_id'];
+      // $user_id = 1;
       $user_sql = "SELECT * FROM follower_list WHERE userlist_id={$user_id}";
       echo '<h1>'.$user_sql.'</h1>';
       echo '<br><h2> 유저의 follower 입니다. </h2><p>';
@@ -51,8 +51,8 @@
     //id에 대해 GET으로 받은 변수가 존재할 때
     if(isset($_GET['following_id'])){
       global $conn;
-      // $user_name= $_SESSION['ses_userid'];
-      // $user_id = $_SESSION['userlist_id'];
+      $user_name= $_SESSION['ses_userid'];
+      $user_id = $_SESSION['userlist_id'];
       $user_id=1;
 
       $sql = "INSERT INTO follower_list (`userlist_id`,`follower_id`) VALUES(".$user_id.",".$_GET['following_id'].")";

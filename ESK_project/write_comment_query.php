@@ -6,7 +6,7 @@
         global $conn;
         $sql = "SELECT * from movie_list ";
         $result = mysqli_query($conn, $sql);
-        echo '<h1>'.$_SESSION['ses_userid'].'원하는 영화의 코멘트 보기</h1><p>';
+        echo '<h1>'.$_SESSION['ses_userid'].'님이 원하는 영화에 코멘트 달기</h1><p>';
         echo '<h1>:'.$sql.'</h1><p>';
 
         $n=0;
@@ -27,79 +27,78 @@
     // 사용자가 영화를 클릭했을 때
     function movieClick(){
       //id에 대해 GET으로 받은 변수가 존재할 때
-        if(isset($_GET['movie_id'])){
-            global $conn;
-            $user_name= $_SESSION['ses_userid'];
-            $user_id = $_SESSION['userlist_id'];
+      if(isset($_GET['movie_id'])){
+        global $conn;
+        $user_name= $_SESSION['ses_userid'];
+        $user_id = $_SESSION['userlist_id'];
 
 
-            // 영화제목을 출력해야 하므로 가져온다.
-            $sql = "SELECT movie_name FROM movie_list WHERE movie_id=".$_GET['movie_id'];
-            echo '영화제목 표시 : '.$sql.'<p>';
-            $result = mysqli_query($conn,$sql);
-            $movie = mysqli_fetch_array($result);
+        // 영화제목을 출력해야 하므로 가져온다.
+        $sql = "SELECT movie_name FROM movie_list WHERE movie_id=".$_GET['movie_id'];
+        echo '영화제목 표시 : '.$sql.'<p>';
+        $result = mysqli_query($conn,$sql);
+        $movie = mysqli_fetch_array($result);
 
-            echo '<br><span style="font-size:35px"> '.$movie["movie_name"].'</span>';
-           // 영화제목을 출력해야 하므로 가져온다.
-            $sql = "SELECT * FROM comment_list WHERE movie_id=".$_GET['movie_id'];
-            echo '<p>댓글 표시 : '.$sql.'</p>';
-            $result = mysqli_query($conn,$sql);
-            //  $comment = mysqli_fetch_array($result);
-            while($comment = mysqli_fetch_array($result)){
-              echo '<p>content : ' . $comment["contents"]. '</p>';
-            }
-            // rateForm($user_id, $user_name, $_GET['id'],$movie['movie_name'],'new_rating');
+        echo '<br><span style="font-size:35px"> '.$movie["movie_name"].'</span>';
+        // 영화제목을 출력해야 하므로 가져온다.
+        $sql = "SELECT * FROM comment_list WHERE movie_id=".$_GET['movie_id'];
+        echo '<p>댓글 표시 : '.$sql.'</p>';
+        $result = mysqli_query($conn,$sql);
+        //  $comment = mysqli_fetch_array($result);
+        while($comment = mysqli_fetch_array($result)){
+          echo '<p>content : ' . $comment["contents"]. '</p>';
+        }
       }
     }
-
-    // 평가 형식
-    function rateForm($user_id, $user_name, $movie_id, $movie_name,$rating_type){
-        echo '<br><span style="font-size:35px"> '.$movie_name.'</span>';
-           // 영화제목을 출력해야 하므로 가져온다.
-          $sql = "SELECT * FROM comment_list WHERE movie_id=".$_GET['movie_id'];
-          echo '<p>댓글 표시 : '.$sql.'</p>';
-          $result = mysqli_query($conn,$sql);
-          //  $comment = mysqli_fetch_array($result);
-          while($comment = mysqli_fetch_array($result)){
-            echo '<p>content : ' . $comment["contents"]. '</p>';
-          }
-          
-
-          // $comment_sql = "SELECT * FROM comment_list WHERE movie_id=".$_GET['movie_id'];
-          // $comment_result = mysqli_query($conn, $comment_sql);
-          // echo '<div class="list-group" style="display:inline-block;">';
-          // while($comment = mysqli_fetch_array($comment_result)){
-          //   echo '<p> comment : ' 
-          //   .$comment["contents"]. ' writing time : '
-          //   .$comment["writing_time"].'</p>';
     
-          // }
-          // echo '</div>';
+    function writeComment(){
+      if(isset($_GET['movie_id'])){
+        global $conn;
+        $user_name= $_SESSION['ses_userid'];
+        $user_id = $_SESSION['userlist_id'];
+        echo '
+        
+        <form role="form" action="write_comment.php?movie_id='.$_GET['movie_id'].'" method="POST"  > 
+          <div class="form-group"> 
+              <label for="comment">Write Comment </label> 
+              <input type="text" class="form-control" id="comment" name="comment" placeholder="Write Comment"> 
+          </div> 
 
-        // hidden 타입은 보이지 않게 넘기는 값들.
-        // echo '<form action="./write_comment_data.php" method="post">
-        // <div class="btn-group" data-toggle="buttons">
-        //   <label class="btn btn-secondary active">
-        //     <input type="radio" name="point" value="1.0" id="option1" autocomplete="off" checked> 1점
-        //   </label>
-        //   <label class="btn btn-secondary">
-        //     <input type="radio" name="point" value="2.0" id="option2" autocomplete="off"> 2점
-        //   </label>
-        //   <label class="btn btn-secondary">
-        //     <input type="radio" name="point" value="3.0" id="option3" autocomplete="off"> 3점
-        //   </label>
-        //   <label class="btn btn-secondary">
-        //     <input type="radio" name="point" value="4.0" id="option3" autocomplete="off"> 4점
-        //   </label>
-        //   <label class="btn btn-secondary">
-        //     <input type="radio" name="point" value="5.0" id="option3" autocomplete="off"> 5점
-        //   </label>
-        // </div>
-        // <input type="hidden" name="movie_id" value="'.$movie_id.'">
-        // <input type="hidden" name="user_id" value="'.$user_id.'">
-        // <input type="hidden" name="user_name" value="'.$user_name.'">
-        // <input type="hidden" name="movie_name" value="'.$movie_name.'">
-        // <br><input class="btn btn-primary" type="submit" value="평가">
-        // </form>';
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        ';
+
+        writeCommentData();
+      }
     }
+    function Redirect($url, $permanent = false)
+    {
+      header('Location: ' . $url, true, $permanent ? 301 : 302);
+
+      exit();
+    }
+
+    function writeCommentData(){
+      if(isset($_POST['comment'])){
+        global $conn;
+        $user_name= $_SESSION['ses_userid'];
+        $user_id = $_SESSION['userlist_id'];
+        // $today= new Date().getTime();
+        $today = date( 'Ymd', time() );
+        $movie_id= $_GET['movie_id'];
+        $redirect_url = "write_comment.php?movie_id=".$movie_id;
+        echo '
+        <h2> '.$today.'일에 '.$_POST['comment'].'라는 comment를 '.$user_name.'님께서 작성하셨습니다. </h2>
+        ';
+        $sql = "INSERT INTO comment_list (`contents`,`userlist_id`,`movie_id`,`writing_time`,`parent_comment_id`) 
+        VALUES('".$_POST['comment']."',".$user_id.",".$_GET['movie_id'].",".$today.",-1)";
+        echo ' : '.$sql.'<p>';
+        $result = mysqli_query($conn,$sql);
+        // alert("등록완료", "write_comment.php?movie_id=".$_GET['movie_id']."); 
+        alert("test");
+        Redirect($redirect_url, false);
+
+      }
+    }
+    
 ?>
