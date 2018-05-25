@@ -3,7 +3,7 @@
     // 본 영화리스트 출력하는 함수
     function movieSawList(){
       global $conn;
-      $user_id = 1;
+      $user_id = $_SESSION['userlist_id'];
       $user_sql = "SELECT movie_id FROM user_rating_list WHERE userlist_id={$user_id}";
       echo '<h1>'.$user_sql.'</h1>';
       echo '<br><h2>이제까지 본 영화들입니다.</h2><p>';
