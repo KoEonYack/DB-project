@@ -19,7 +19,7 @@
 
     function nationClick(){
       global $conn;
-      $user_id=1;
+      $user_id=$_SESSION['userlist_id'];
       if(isset($_GET['id'])){
         $movie_nation_sql =
         "SELECT m.movie_id, movie_name FROM movie_list m

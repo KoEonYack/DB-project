@@ -12,6 +12,15 @@
 <body>
     <div class="container"><br><br>
         <?php
+            session_start();
+            if(!isset($_SESSION['ses_userid'])){
+                echo
+                '<script>
+                    alert("로그인을 해주세요");
+                    document.location.href="../button.php"; 
+                </script>';
+                
+            }
             require('movie_nation_query.php');
             movieSawNationList();
             nationClick();
