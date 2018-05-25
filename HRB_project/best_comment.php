@@ -11,8 +11,17 @@
     <body>
         <div class="container"><br><br>
             <?php
-            require('best_comment_query.php');
-            bestComment();
+                session_start();
+                if(!isset($_SESSION['ses_userid'])){
+                    echo
+                    '<script>
+                        alert("로그인을 해주세요");
+                        document.location.href="../button.php"; 
+                    </script>';
+                    
+                }
+                require('best_comment_query.php');
+                bestComment();
             ?>
             <br><br><a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
         </div>

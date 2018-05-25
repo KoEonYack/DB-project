@@ -32,7 +32,7 @@
             <hr><br>
 
             <p>
-                <a href="./MCK_project/member/signUpForm.php"><button type="button" class="btn btn-default"> 1. Sign UP </button></a>
+                <a href="./MCK_project/member/signUpForm.php"><button type="button" class="btn btn-default"> 1. 회원가입 </button></a>
                 <?php
                     session_start();
                     if(!isset($_SESSION['ses_userid'])){
@@ -97,7 +97,7 @@
             <p>
                 <a href="./KEY_project/hated_genre.php"> <button type="button" class="btn btn-default"> 18-3. 관심없어요 영화 장르별 보기 </button></a>
                 <a href="./KEY_project/search_movie_sql19.php"><button type="button" class="btn btn-default"> 19. 영화 검색 </button></a>
-                <a href="./KEY_project/serarch_user_sql20.php"><button type="button" class="btn btn-default"> 20. 유저 검색 </button></a>
+                <a href="./KEY_project/search_user_sql20.php"><button type="button" class="btn btn-default"> 20. 유저 검색 </button></a>
                 <button type="button" class="btn btn-default"> 21. 미완성 </button> 
             </p>
 

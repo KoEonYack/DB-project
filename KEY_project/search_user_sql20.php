@@ -27,21 +27,30 @@
 
         <div class="container"><br><br>
         <h2>SQL Senario</h2>
-        <p>The user can search for the user registered on this homepage.</p>
+        <p>유저는 다른 유저를 검색할 수 있다.</p>
         <hr>
-            <form role="form" action="serarch_user_sql20_1.php" method="POST"  > 
+            <form role="form" action="search_user_sql20_1.php" method="POST"  > 
                 <div class="form-group"> 
-                    <label for="username">Search user name</label> 
+                    <label for="username">유저 이름으로 검색</label> 
                     <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name"> 
                 </div> 
 
-                <button type="submit" class="btn btn-default">Submit</button>
-                <p align="right">
-                <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
-                </p>
+                <button type="submit" class="btn btn-default">검색</button>
             </form>
 
-            
+            <p></p>
+
+            <form role="form" action="search_user_sql20_2.php" method="POST"  > 
+                <div class="form-group"> 
+                    <label for="nickname">유저 닉네임으로 검색</label> 
+                    <input type="text" class="form-control" id="nickname" name="nickname" placeholder="Enter nick name"> 
+                </div> 
+                <button type="submit" class="btn btn-default">검색</button>
+            </form>
+
+            <p align="right">
+                <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
+            </p>
         </div>
     </body>
 </html>

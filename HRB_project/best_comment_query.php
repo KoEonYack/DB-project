@@ -3,7 +3,7 @@
 
     function bestComment(){
         global $conn;
-        $user_id=1;
+        $user_id=$_SESSION['userlist_id'];
         // 먼저 해당 유저가 쓴 comment_id를 전부 가져온다.
         $comment_sql = "SELECT comment_id FROM comment_list WHERE userlist_id={$user_id};";
         echo '<h4>'.$comment_sql.'</h4>';
