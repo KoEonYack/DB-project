@@ -13,6 +13,7 @@
 </head>
     <body>
         <div class="container"><br><br>
+        <?php require('../db_connect.php'); ?><br>
             <h2>SQL Table</h2>
             <p>유저는 싫어하는 영화를 추가할 수 있다. 
             <br>
@@ -20,7 +21,7 @@
             </p> <hr>
             
             <?php
-                require('../db_connect.php');
+                
                 session_start();
                 if(!isset($_SESSION['ses_userid'])){
                     echo "<small>로그인을 해주세요</small>";
