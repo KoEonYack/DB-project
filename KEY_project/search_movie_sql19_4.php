@@ -18,7 +18,7 @@
                 $end = $_POST['time_end'];
                 $flag = 0;
 
-                $sql = "SELECT * FROM movie_list WHERE running_time>={$begin} AND running_time<={$end}";
+                $sql = "SELECT * FROM movie_list WHERE running_time BETWEEN {$begin} AND {$end}";
                 $result = mysqli_query($conn, $sql);
 
                 #$temp_findcategory = $_POST['findcategory']; 
