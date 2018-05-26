@@ -28,15 +28,6 @@
                 userList();
                 userClick();
 
-                // showFollower();
-
-                // $user_result = mysqli_query($conn, "SELECT * FROM user_list");
-                // // $n = 0;
-                // while($user = mysqli_fetch_array($user_result)){
-                //   echo '<button type="button"  class="btn btn-default">
-                //   <span style="font-size:20px">'
-                //   .$user["nick_name"].'</span></button>  ';
-                // }
             ?>
             <br>
             <br><a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
