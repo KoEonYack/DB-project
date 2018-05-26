@@ -12,13 +12,15 @@
 </head>
     <body>
 
-        <div class="container"><br><br>
+        <div class="container">
+
+        <?php require('../db_connect.php'); ?>
+
+        <br><br>
             <h2>관리자 페이지</h2>
             <p>관리자는 본 페이지에서 통계를 볼 수 있습니다.</p>
         <hr>
         <?php
-            require('../db_connect.php');
-
             echo "<br>";
 
             $comment_count_query = "SELECT count(*) as user_counter FROM user_list"; 
@@ -65,14 +67,19 @@
 
         <br>
         <h4> 더 자세한 관리 보기 </h4>
+        <p> 관리자는 다음과 같은 다양한 관리를 할 수 있다.</p>
         <hr>
-        <br><a href="./admin_revASC.php"><button type="button" class="btn btn-primary">영화 수익 낮은 순으로 보기</button></a>
-        <a href="./admin_revDESC.php"><button type="button" class="btn btn-primary">영화 수익 높은 순으로 보기</button></a>
-        <a href="./admin_user_rating.php"><button type="button" class="btn btn-primary">사용자가 별점을 준 리스트</button></a>
-        <a href="../MCK_project/makeMovie_INCREASEINDEX.php"><button type="button" class="btn btn-primary"> Increasing order INDEX를 movie_list에 적용하기</button></a>
-        <a href="../MCK_project/makeMovie_DECREASEINDEX.php"><button type="button" class="btn btn-primary"> Decreasing order INDEX를 movie_list에 적용하기</button></a>
-        <a href="../MCK_project/updateUserPassWord.php"><button type="button" class="btn btn-primary"> 미소지기님의 비밀번호를 \'명철123\'으로 변경하기</button></a>
+        <br>
+        <p>
+            <a href="./admin_revASC.php"><button type="button" class="btn btn-primary">영화 수익 낮은 순으로 보기</button></a>
+            <a href="./admin_revDESC.php"><button type="button" class="btn btn-primary">영화 수익 높은 순으로 보기</button></a>
+            <a href="../MCK_project/makeMovie_INCREASEINDEX.php"><button type="button" class="btn btn-primary"> Increasing order INDEX를 movie_list에 적용하기</button></a>
+        </p>
 
+        <p>
+            <a href="../MCK_project/makeMovie_DECREASEINDEX.php"><button type="button" class="btn btn-primary"> Decreasing order INDEX를 movie_list에 적용하기</button></a>
+            <a href="../MCK_project/updateUserPassWord.php"><button type="button" class="btn btn-primary"> 미소지기님의 비밀번호를 \'명철123\'으로 변경하기</button></a>
+        </p>
         
         <br><br><br><br><br>
         <a href="../button.php"><button type="button" class="btn btn-success">Go To Index Page</button></a>
