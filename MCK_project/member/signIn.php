@@ -33,6 +33,10 @@
                             history.back();
                             </script>
                         ";
+                        $userlist_id = $row['userlist_id'];
+                        $sql = "INSERT INTO user_log_list2 VALUES($userlist_id, NOW())";
+                        
+                        mysqli_query($conn,$sql);
 
                         header("HTTP/1.1 307 Temporary move"); 
                         header("Location: ../../button.php");
