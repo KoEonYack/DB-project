@@ -81,14 +81,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label>약관 동의</label>
-                    <div data-toggle="buttons">
-                        <label class="btn btn-primary active">
-                            <span class="fa fa-check"></span>
-                            <input id="agree" type="checkbox" autocomplete="off" checked>
-                        </label>
-                        <a href="#">이용약관</a>에 동의합니다.
-                    </div>
+                    <label for="username">공개범위</label>
+                    <input type="text" name="open_range" class="form-control" id="username" placeholder="all, none, follower 중에 입력해주세요.">
+                </div>
+
+                <div class="form-group">
+                    <label for="profile">프로필 사진 링크</label>
+                    <input type="text" name="profile" class="form-control" id="profile_url" placeholder="프로필 사진 링크를 적어주세요.">
                 </div>
 
                 <div class="form-group text-center">

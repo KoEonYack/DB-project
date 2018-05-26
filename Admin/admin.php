@@ -81,6 +81,10 @@
             <a href="../MCK_project/updateUserPassWord.php"><button type="button" class="btn btn-primary"> 미소지기님의 비밀번호를 \'명철123\'으로 변경하기 (UPDATE)</button></a>
             <a href="./admin_addActor.php"><button type="button" class="btn btn-primary">영화에 배우 추가하기</button></a>
         </p>
+
+        <p>
+            <a href="./admin_loginlog.php"><button type="button" class="btn btn-primary">유저의 회원가입 로그확인</button></a>
+        </p>
         
         <br><br><br><br><br>
         <a href="../button.php"><button type="button" class="btn btn-success">Go To Index Page</button></a>
