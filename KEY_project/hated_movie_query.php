@@ -1,7 +1,5 @@
 <?php
     
-
-    
     // 본 영화리스트 출력하는 함수
     function hateMovieList(){
       global $conn;
@@ -10,6 +8,7 @@
       $user_id = $_SESSION['userlist_id'];
 
       $user_sql = "SELECT * FROM `movie_list` WHERE `movie_id` IN (SELECT `movie_id` FROM `user_hate_list` WHERE `userlist_id`={$user_id})";
+
       
       echo '<br>';
       echo '<h2>SQL Table</h2>';
@@ -20,15 +19,6 @@
       $movie_result = mysqli_query($conn, $user_sql);
       // var_dump($movie_result); 
       echo '<div class="list-group" style="display:inline-block;">';
-/*
-      while($movie = mysqli_fetch_array($movie_result)){
-        
-        echo $movie["movie_id"];
-        echo '<a href="./KEY_project/movie_info.php?id='
-        .$movie["movie_id"].'" class="list-group-item list-group-item-action" style="text-decoration:none; color:black;">'
-        .$movie["movie_name"].'</a>';
-        }
-*/
 
         echo '<p>';
         while($movie = mysqli_fetch_array($movie_result)){

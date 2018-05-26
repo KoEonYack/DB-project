@@ -12,6 +12,11 @@
 </head>
     <body>
         <div class="container"><br><br>
+            <?php require('../db_connect.php'); ?>
+            <br>
+            <h2>SQL Senario</h2>
+            <p>SQL : SELECT * FROM user_list WHERE nick_name LIKE %.$user.%; </p>
+            <hr>
             <?php 
                 $user = $_POST['nickname'];
                 $flag = 0;
@@ -20,7 +25,6 @@
                 $session_id = $_SESSION['userlist_id'];
                 # echo $session_id;
 
-                require('../db_connect.php');
                 $result = mysqli_query($conn, "SELECT * FROM user_list WHERE nick_name LIKE \"%".$user."%\"");
             
                echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
