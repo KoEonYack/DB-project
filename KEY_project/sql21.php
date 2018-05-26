@@ -37,7 +37,7 @@
         <h4>선호하는 감독</h4>
         <p>SQL query : SELECT * FROM movie_director_list dl 
         INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$user_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id
-        INNER JOIN director_list gl ON gl.director_id = dl.director_id</p>
+        INNER JOIN director_list gl ON gl.director_id = dl.director_id;</p>
         <hr>
     <?php
 
@@ -87,40 +87,71 @@
             echo "<tr>  
             <td>".$row['genre_name']."</td>  
             </tr>";
-        }   
+        }
+
         echo "</table>";
     ?>
 
     <br><br><br>
     <h4>선호하는 국가</h4>
-    <p>SQL query : </p>
+    <p>SQL query : SELECT * FROM movie_list dl 
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id;</p>
     <hr>
     <?php
         echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
         echo "<tr>
-        <th style='text-align:center;'>감독 ID - 제거</th>
-        <th style='text-align:center;'>이름 이름</th>
-        <th style='text-align:center;'>나이</th>
-        <th style='text-align:center;'>프로필 사진</th>
+        <th style='text-align:center;'>국가</th>
         </tr>";
+
+
+        $sql5 = "SELECT * FROM movie_list dl 
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id";
+
+        $result_sql5 = mysqli_query($conn, $sql5);
+        while( $row = mysqli_fetch_array($result_sql5) ){  
+            echo "<tr>  
+            <td>".$row['nation']."</td>  
+            </tr>";
+        }   
+
         echo "</table>";
     ?>
+
+    <br><br><br>
 
     <h4>선호하는 배우</h4>
-    <p>SQL query : </p>
+    <p>SQL query : SELECT * FROM movie_actor_list dl 
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id
+        INNER JOIN actor_list gl ON gl.actor_id = dl.actor_id;</p>
     <hr>
     <?php
         echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
         echo "<tr>
-        <th style='text-align:center;'>감독 ID - 제거</th>
-        <th style='text-align:center;'>이름 이름</th>
+        <th style='text-align:center;'>이름</th>
         <th style='text-align:center;'>나이</th>
+        <th style='text-align:center;'>성별</th>
+        <th style='text-align:center;'>조연/주연</th>
         <th style='text-align:center;'>프로필 사진</th>
         </tr>";
+
+        $sql5 = "SELECT * FROM movie_actor_list dl 
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id
+        INNER JOIN actor_list gl ON gl.actor_id = dl.actor_id";
+
+        $result_sql5 = mysqli_query($conn, $sql5);
+        while( $row = mysqli_fetch_array($result_sql5) ){  
+            echo "<tr>  
+            <td>".$row['actor_name']."</td>  
+            <td>".$row['actor_age']."</td>  
+            <td>".$row['actor_gender']."</td>
+            <td>".$row['actor_type']."</td>
+            <td><image src=".$row1['photo_url']." width='80' height='90'></td>
+            </tr>";
+        }
         echo "</table>";
     ?>
 
-        <a href="../button.php"><button type="button" class="btn btn-primary">Back</button></a>
+        <a href="../button.php"><button type="button" class="btn btn-primary">Go To Menu</button></a>
         <br>
 
         </div>
