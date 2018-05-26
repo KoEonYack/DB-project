@@ -24,6 +24,6 @@
         echo '<h4>'.$sql.'</h4><p>';
         $result = mysqli_query($conn,$sql);
         $fre = mysqli_fetch_array($result);
-        echo "<h4>가장 많이 준 별점 : ".$fre['frequency']."점</h4>";
+        echo "<h4>가장 많이 준 별점 : ".$fre['star_rate']."점을 ".$fre['frequency']."번 주셨습니다.</h4>";
     }
 ?>
