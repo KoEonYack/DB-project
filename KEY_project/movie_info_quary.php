@@ -65,10 +65,4 @@
             echo "Error :: invaild id";
         }
     }
-
-
-
-
-
-
 ?>

@@ -36,13 +36,13 @@
                 <?php
                     session_start();
                     if(!isset($_SESSION['ses_userid'])){
-                        echo '<a href="./MCK_project/member/main.php"><button type="button" class="btn btn-info"> 2-1. Login (order by rand() limit 10)</button></a>';
+                        echo '<a href="./MCK_project/member/main.php"><button type="button" class="btn btn-info"> 2-1. Login </button></a>';
                     }
                     else{
                         echo '<a href="./MCK_project/member/signOut.php"><button type="button" class="btn btn-info"> 2-2. Logout </button></a>';
                     }
                 ?>
-                <a href="./MCK_project/initial_rating.php"><button type="button" class="btn btn-default">3. 회원가입시 10개의 영화평가 </button></a>
+                <a href="./MCK_project/initial_rating.php"><button type="button" class="btn btn-default">3. 회원가입시 10개의 영화평가(order by rand() limit 10)</button></a>
             </p>
 
             <p>
@@ -77,14 +77,14 @@
 
             <p>
                 <a href="./MCK_project/comment_like.php"><button type="button" class="btn btn-default"> 14. 댓글에 좋아요 누르기 </button></a>
-                <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15-1. 보고싶어요 체크하기 </button></a>
-                <a href="./MCK_project/hopeToSee_remove.php"><button type="button" class="btn btn-default"> 15-2. 보고싶어요 삭제하기 </button></a>
-                <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고싶어요 영화 보기 </button></a>
+                <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15-1. 보고싶어요 체크하기(NOT IN, Subquery) </button></a>
+                <a href="./MCK_project/hopeToSee_remove.php"><button type="button" class="btn btn-default"> 15-2. 보고싶어요 삭제하기(IN, Subquery, Delete) </button></a>
             </p>
 
             <p>
-                <a href="./MCK_project/wanted_nation.php"><button type="button" class="btn btn-default"> 16-2. 보고싶어요 국가별 보기 </button></a>
-                <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고싶어요 장르별 보기 </button></a>
+                <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고싶어요 영화 보기 (IN, Subquery)</button></a>
+                <a href="./MCK_project/wanted_nation.php"><button type="button" class="btn btn-default"> 16-2. 보고싶어요 국가별 보기 (IN, Subquery)</button></a>
+                <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고싶어요 장르별 보기 (IN, Subquery)</button></a>
             </p>
 
             <p>
@@ -111,12 +111,12 @@
                 <a href="./ESK_project/user_follow_insert.php"><button type="button" class="btn btn-default"> 26. 팔로우 추가하기 </button></a>
                 <a href="./ESK_project/user_following.php"><button type="button" class="btn btn-default"> 27. 팔로잉 리스트 팔로워 리스트 조회 </button></a>
                 <a href="./MCK_project/search_user.php"><button type="button" class="btn btn-default"> 28. 다른 사용자 검색 </button></a>
-                <a href="./MCK_project/betweenUser_rating.php"><button type="button" class="btn btn-default"> 29. 다른 사용자와의 평가</button></a>
+                <a href="./MCK_project/betweenUser_rating.php"><button type="button" class="btn btn-default"> 29. 다른 사용자와의 평가(Inner Join, Subquery)</button></a>
             </p>
 
             <p>     
-                <a href="./MCK_project/recommend_genre.php"><button type="button" class="btn btn-default"> 30-1. 장르 기준 추천 영화 </button></a>
-                <a href="./MCK_project/recommend_nation.php"><button type="button" class="btn btn-default"> 30-2. 국가 기준 추천 영화 </button></a>
+                <a href="./MCK_project/recommend_genre.php"><button type="button" class="btn btn-default"> 30-1. 장르 기준 추천 영화(Left Join, Subquery, DISTINCT)</button></a>
+                <a href="./MCK_project/recommend_nation.php"><button type="button" class="btn btn-default"> 30-2. 국가 기준 추천 영화(Left Join, Subquery, DISTINCT)</button></a>
             </p>
 
             
