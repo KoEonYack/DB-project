@@ -31,7 +31,10 @@
 
                 echo "<p>";
                 require('./select_movie_hate_quary_sql17.php');
-                $movie_result = mysqli_query($conn, "SELECT * FROM movie_list");
+                $sql = "SELECT * FROM movie_list 
+                WHERE `movie_id` 
+                NOT IN (SELECT `movie_id` FROM user_hate_list WHERE `userlist_id` = $user_id)";
+                $movie_result = mysqli_query($conn, $sql);
                 $n = 0;
                 while($movie = mysqli_fetch_array($movie_result)){
                     # $cp_movie_id = $movie["movie_id"];
