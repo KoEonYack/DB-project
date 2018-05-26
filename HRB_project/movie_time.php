@@ -11,17 +11,31 @@
     <body>
         <div class="container"><br><br>
             <?php
-                require('../db_connect.php');
-                global $conn;
-                $sql = "SELECT SUM(running_time) AS time_sum FROM movie_list
-                LEFT JOIN user_rating_list
-                ON movie_list.movie_id=user_rating_list.movie_id";
-                echo '<h4>'.$sql.'</h4>';
-
-                $result = mysqli_query($conn, $sql);
-                $time = mysqli_fetch_array($result);
-                echo '<h4>영화를 본 총 시간은 :
-                '.$time['time_sum'].' 시간 입니다.</h4>';
+                session_start();
+                if(!isset($_SESSION['ses_userid'])){
+                    echo
+                    '<script>
+                        alert("로그인을 해주세요");
+                        document.location.href="../button.php"; 
+                    </script>';
+                    
+                }
+                else{
+                    require('../db_connect.php');
+                    global $conn;
+                    $sql = "SELECT SUM(running_time) AS time_sum FROM movie_list
+                    LEFT JOIN user_rating_list
+                    ON movie_list.movie_id=user_rating_list.movie_id WHERE user_rating_list.userlist_id=".$_SESSION['userlist_id'];
+                    echo '<h4>'.$sql.'</h4>';
+    
+                    $result = mysqli_query($conn, $sql);
+                    $time = mysqli_fetch_array($result);
+                    echo '<h4>'.$_SESSION['ses_userid'].'님이 영화를 본 총 시간은 :
+                    '.$time['time_sum'].' 시간 입니다.</h4>';
+                }
+            ?>
+            <?php
+                
             ?>
             <br><br><a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
         </div>

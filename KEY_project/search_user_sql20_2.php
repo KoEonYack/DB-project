@@ -13,7 +13,7 @@
     <body>
         <div class="container"><br><br>
             <?php 
-                $user = $_POST['username'];
+                $user = $_POST['nickname'];
                 $flag = 0;
 
                 session_start();
@@ -21,7 +21,7 @@
                 # echo $session_id;
 
                 require('../db_connect.php');
-                $result = mysqli_query($conn, "SELECT * FROM user_list");
+                $result = mysqli_query($conn, "SELECT * FROM user_list WHERE nick_name LIKE \"%".$user."%\"");
             
                echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
                # echo "<table class='table table-hover' >";
@@ -37,7 +37,6 @@
                 </tr>";
 
                 while( $row = mysqli_fetch_array($result) ){
-                    if ( $row["user_name"] == $user ){ // 입력 받은 유저하고 디비에 있는 유저
                         if( $row["open_range"] == "all" ){
                             $name = $row["user_name"];
                             $nick_name = $row["nick_name"]; 
@@ -80,7 +79,6 @@
                             $flag = 1;                     
                         }   
                     }
-                }
                 echo "</table>";
 
                 

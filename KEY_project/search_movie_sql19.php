@@ -31,17 +31,46 @@
         <hr>
             <form role="form" action="search_movie_sql19_1.php" method="POST"  > 
                 <div class="form-group"> 
-                    <label for="username">영화 제목 기준 검색</label> 
+                    <label for="username">영화 제목으로 검색</label> 
                     <input type="text" class="form-control" id="moviename" name="moviename" placeholder="Enter movie name"> 
                 </div> 
-
-                <button type="submit" class="btn btn-default">Submit</button>
-                <p align="right">
-                <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
-                </p>
+                <button type="submit" class="btn btn-default">검색</button>
             </form>
 
-            
+            <p></p>
+
+            <form role="form" action="search_movie_sql19_2.php" method="POST"  > 
+                <div class="form-group"> 
+                    <label for="directorname">영화 감독으로 검색</label> 
+                    <input type="text" class="form-control" id="directorname" name="directorname" placeholder="Enter director name"> 
+                </div> 
+                <button type="submit" class="btn btn-default">검색</button>
+            </form>
+
+            <p></p>
+
+            <form role="form" action="search_movie_sql19_3.php" method="POST"  > 
+                <div class="form-group"> 
+                    <label for="actorname">영화 배우로 검색</label> 
+                    <input type="text" class="form-control" id="actorname" name="actorname" placeholder="Enter actor name"> 
+                </div> 
+                <button type="submit" class="btn btn-default">검색</button>
+            </form>
+
+            <p></p>
+
+            <form role="form" action="search_movie_sql19_4.php" method="POST"  > 
+                <div class="form-group"> 
+                    <label for="time">영화 러닝타임으로 검색 : 시작~끝 시간</label> 
+                    <input type="text" class="form-control" id="time" name="time_begin" placeholder="Enter beginning time">
+                    <input type="text" class="form-control" id="time" name="time_end" placeholder="Enter ending time"> 
+                </div> 
+                <button type="submit" class="btn btn-default">검색</button>
+            </form>
+
+            <p align="right">
+                <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a>
+            </p>
         </div>
     </body>
 </html>

@@ -12,6 +12,15 @@
         <div class="container"><br><br>
             <a href="../button.php"><button type="button" class="btn btn-primary">Go To Main</button></a><br><br>
             <?php
+                session_start();
+                if(!isset($_SESSION['ses_userid'])){
+                    echo
+                    '<script>
+                        alert("로그인을 해주세요");
+                        document.location.href="../button.php"; 
+                    </script>';
+                    
+                }
                 require('star_info_query.php');
                 starAverage();
                 frequentStar();

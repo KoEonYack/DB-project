@@ -6,8 +6,8 @@
         global $conn;
         $sql = "SELECT * from movie_list order by rand() limit 10";
         $result = mysqli_query($conn, $sql);
-        echo '<h1>/"'.$_SESSION['ses_userid'].'/"님 회원가입을 축하합니다. 10개의 영화를 평가해주세요.</h1><p>';
-        echo '<h1>:'.$sql.'</h1><p>';
+        echo '<h1>'.$_SESSION['ses_userid'].'님 회원가입을 축하합니다. <br>10개의 영화를 평가해주세요.</h1><p>';
+        echo '<h1>'.$sql.'</h1><p>';
 
         $n=0;
         // 영화이름과 링크를 연결, 링크는 매개변수 id로 보낸다.

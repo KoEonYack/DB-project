@@ -26,12 +26,13 @@
                         echo "<small> 안녕하세요 ", $_SESSION['ses_userid']  ,"님!      </small>";
                     }
                 ?>
+                <a href="index.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
                 </h3>
             </div>
             <hr><br>
 
             <p>
-                <a href="./MCK_project/member/signUpForm.php"><button type="button" class="btn btn-default"> 1. Sign UP </button></a>
+                <a href="./MCK_project/member/signUpForm.php"><button type="button" class="btn btn-default"> 1. 회원가입 </button></a>
                 <?php
                     session_start();
                     if(!isset($_SESSION['ses_userid'])){
@@ -65,31 +66,45 @@
                 <a href="./HRB_project/movie_saw.php"><button type="button" class="btn btn-default"> 10-1. 이제까지 본 영화 </button></a>
                 <a href="./HRB_project/movie_nation.php"><button type="button" class="btn btn-default">10-2. 국가별로 보기</button></a>
                 <a href="./HRB_project/movie_genre.php"><button type="button" class="btn btn-default">10-3. 장르별로 보기</button></a>
+            </p>
+
+            <p>
                 <a href="./ESK_project/write_comment.php"><button type="button" class="btn btn-default"> 11. 코멘트 작성하기 </button></a>
-                <button type="button" class="btn btn-default"> SQL12 : 미완성</button> 
+                <a href="./ESK_project/write_comments_comment.php"><button type="button" class="btn btn-default"> 12 : 댓글의 댓글달기</button></a>
                 <a href="./ESK_project/sort_comment.php"><button type="button" class="btn btn-default"> 13. 코멘트 보기 </button></a>
-            </p>
-
-            <p>
                 <a href="./MCK_project/comment_like.php"><button type="button" class="btn btn-default"> 14. 댓글에 좋아요 누르기 </button></a>
-                <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15. 보고싶어요 체크하기 </button></a>
-                <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고 싶은 영화 보기 </button></a>
-                <a href="./MCK_project/wanted_nation.php"><button type="button" class="btn btn-default"> 16-2. 보고 싶은 영화 국가별 보기 </button></a>
-
             </p>
 
             <p>
-                <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고 싶은 영화 장르별 보기 </button></a>
-                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17. 관심없는 영화 추가 </button></a> 
-                <a href="./KEY_project/hated_movie.php"><button type="button" class="btn btn-default"> 18-1. 관심없는 영화 보기 </button></a>
-                <a href="./KEY_project/hated_nation.php"><button type="button" class="btn btn-default"> 18-2. 관심없는 영화 국가별 보기 </button></a>
+                <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15-1. 보고싶어요 체크하기 </button></a>
+                <a href="./MCK_project/hopeToSee_remove.php"><button type="button" class="btn btn-default"> 15-2. 보고싶어요 삭제하기 </button></a>
+                <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고싶어요 영화 보기 </button></a>
             </p>
 
             <p>
+                <a href="./MCK_project/wanted_nation.php"><button type="button" class="btn btn-default"> 16-2. 보고싶어요 국가별 보기 </button></a>
+                <a href="./MCK_project/wanted_genre.php"><button type="button" class="btn btn-default"> 16-3. 보고싶어요 장르별 보기 </button></a>
+            </p>
+
+            <p>
+                <a href ="./KEY_project/select_movie_hate_sql17.php"><button type="button" class="btn btn-default"> 17-1. 관심없어요 체크하기 </button></a>
+                <a href ="./KEY_project/hated_remove.php"><button type="button" class="btn btn-default"> 17-2. 관심없어요 삭제하기 </button></a>  
+                <a href="./KEY_project/hated_movie.php"><button type="button" class="btn btn-default"> 18-1. 관심없어요 영화 보기 </button></a>
+                <a href="./KEY_project/hated_nation.php"><button type="button" class="btn btn-default"> 18-2. 관심없어요 영화 국가별 보기 </button></a>
+            </p>
+
+            <p>
+<<<<<<< HEAD
                 <a href="./KEY_project/hated_genre.php"> <button type="button" class="btn btn-default"> 18-3. 관심없는 영화 장르별 보기 </button></a>
                 <a href="./KEY_project/search_movie_sql19.php"><button type="button" class="btn btn-default"> SQL19 : 영화 검색 </button></a>
                 <a href="./KEY_project/serarch_user_sql20.php"><button type="button" class="btn btn-default"> SQL20 : 유저 검색 </button></a>
                 <a href="./KEY_project/sql21.php"><button type="button" class="btn btn-default"> SQL21 : 선호하는 감독 / 장르 / 국가 / 배우 보기 </button></a> 
+=======
+                <a href="./KEY_project/hated_genre.php"> <button type="button" class="btn btn-default"> 18-3. 관심없어요 영화 장르별 보기 </button></a>
+                <a href="./KEY_project/search_movie_sql19.php"><button type="button" class="btn btn-default"> 19. 영화 검색 </button></a>
+                <a href="./KEY_project/search_user_sql20.php"><button type="button" class="btn btn-default"> 20. 유저 검색 </button></a>
+                <button type="button" class="btn btn-default"> 21. 미완성 </button> 
+>>>>>>> 100e341566e07f99e0c5d2f00deb0f7f9eead76b
             </p>
 
             <p>
@@ -103,6 +118,9 @@
                 <a href="./ESK_project/user_following.php"><button type="button" class="btn btn-default"> 27. 팔로잉 리스트 팔로워 리스트 조회 </button></a>
                 <a href="./MCK_project/search_user.php"><button type="button" class="btn btn-default"> 28. 다른 사용자 검색 </button></a>
                 <a href="./MCK_project/betweenUser_rating.php"><button type="button" class="btn btn-default"> 29. 다른 사용자와의 평가</button></a>
+            </p>
+
+            <p>     
                 <a href="./MCK_project/recommend_genre.php"><button type="button" class="btn btn-default"> 30-1. 장르 기준 추천 영화 </button></a>
             </p>
 
@@ -111,9 +129,7 @@
                 <a href="./MCK_project/recommend_nation.php"><button type="button" class="btn btn-default"> 30-2. 국가 기준 추천 영화 </button></a>
                 <a href="./Admin/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>
             </p>
-            
-            <br><br><br><br>
-            <a href="index.html"><button type="button" class="btn btn-success">Go To Index Page</button></a>
+
         </div>
     </body>
 </html>
