@@ -90,6 +90,7 @@
             <a href="./admin_addActor.php"><button type="button" class="btn btn-primary">영화에 배우 추가하기(TRANSACTION)</button></a>
             <a href="./admin_signUPlog.php"><button type="button" class="btn btn-primary">유저의 회원가입 로그확인(TRIGGER)</button></a>
             <a href="./admin_loginlog.php"><button type="button" class="btn btn-primary">유저의 로그인 로그확인</button></a>
+            <a href="./admin_logoutlog.php"><button type="button" class="btn btn-primary">유저의 로그아웃 로그확인</button></a>
         </p>
         
         </div>
