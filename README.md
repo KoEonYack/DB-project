@@ -20,7 +20,7 @@ Note. Most scenarios require login.
 
 __db_connect.php__
 
-Our git repository does not have db_connect.php.(check .gitignore) Because it contains the sensitive password to access mysql. However db_connect.php file is required to operate DB locally.(There is no problem use website) db_connect.php is on our DB project Google Drive.
+Our git repository does not have db_connect.php.(check .gitignore) Because it contains the sensitive password to access mysql. However db_connect.php file is required to operate DB locally.(EC server havev db_connect.php so there is no problem use website) db_connect.php is on our DB project Google Drive.
 
 
 __ESK_project, HRB_project, KEY_project, and MCK_project directory__
