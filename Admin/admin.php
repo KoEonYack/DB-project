@@ -69,6 +69,10 @@
         <br><a href="./admin_revASC.php"><button type="button" class="btn btn-primary">영화 수익 낮은 순으로 보기</button></a>
         <a href="./admin_revDESC.php"><button type="button" class="btn btn-primary">영화 수익 높은 순으로 보기</button></a>
         <a href="./admin_user_rating.php"><button type="button" class="btn btn-primary">사용자가 별점을 준 리스트</button></a>
+        <a href="../MCK_project/makeMovie_INCREASEINDEX.php"><button type="button" class="btn btn-primary"> Increasing order INDEX를 movie_list에 적용하기</button></a>
+        <a href="../MCK_project/makeMovie_DECREASEINDEX.php"><button type="button" class="btn btn-primary"> Decreasing order INDEX를 movie_list에 적용하기</button></a>
+        <a href="../MCK_project/updateUserPassWord.php"><button type="button" class="btn btn-primary"> 미소지기님의 비밀번호를 \'명철123\'으로 변경하기</button></a>
+
         
         <br><br><br><br><br>
         <a href="../button.php"><button type="button" class="btn btn-success">Go To Index Page</button></a>
