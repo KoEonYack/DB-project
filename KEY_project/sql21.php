@@ -45,7 +45,6 @@
         # echo "<table class='table table-hover' >";
 
         echo "<tr>
-        <th style='text-align:center;'>감독 ID - 제거</th>
         <th style='text-align:center;'>이름 이름</th>
         <th style='text-align:center;'>나이</th>
         <th style='text-align:center;'>프로필 사진</th>
@@ -57,10 +56,9 @@
         $result_sql4= mysqli_query($conn, $sql4);
         while( $row1 = mysqli_fetch_array($result_sql4) ){  
             echo "<tr>  
-            <td>".$row1['director_id']."</td>  
             <td>".$row1['director_name']."</td>  
             <td>".$row1['director_age']."</td>  
-            <td><image src=".$row1['photo_url']." width='70' height='90'></td>
+            <td><image src=".$row1['photo_url']." width='80' height='90'></td>
             </tr>";
         }   
         echo "</table>";
@@ -72,7 +70,7 @@
     <h4>선호하는 장르</h4>
     <p>SQL query : SELECT * FROM movie_genre_list dl 
         INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$user_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id
-        INNER JOIN genre_list gl ON gl.genre_id = dl.genre_id";</p>
+        INNER JOIN genre_list gl ON gl.genre_id = dl.genre_id;</p>
     <hr>
     <?php
         echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
