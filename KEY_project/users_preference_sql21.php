@@ -69,7 +69,7 @@
     <br><br><br>
     <h4>선호하는 장르</h4>
     <p>SQL query : SELECT * FROM movie_genre_list dl 
-        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$user_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$user_id." AND star_rate>=4) ml ON dl.movie_id=ml.movie_id
         INNER JOIN genre_list gl ON gl.genre_id = dl.genre_id;</p>
     <hr>
     <?php
@@ -79,7 +79,7 @@
         </tr>";
 
         $sql5 = "SELECT * FROM movie_genre_list dl 
-        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>=4) ml ON dl.movie_id=ml.movie_id
         INNER JOIN genre_list gl ON gl.genre_id = dl.genre_id";
 
         $result_sql5 = mysqli_query($conn, $sql5);
@@ -95,7 +95,7 @@
     <br><br><br>
     <h4>선호하는 국가</h4>
     <p>SQL query : SELECT * FROM movie_list dl 
-        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id;</p>
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>=4) ml ON dl.movie_id=ml.movie_id;</p>
     <hr>
     <?php
         echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
@@ -105,7 +105,7 @@
 
 
         $sql5 = "SELECT * FROM movie_list dl 
-        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id";
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>=4) ml ON dl.movie_id=ml.movie_id";
 
         $result_sql5 = mysqli_query($conn, $sql5);
         while( $row = mysqli_fetch_array($result_sql5) ){  
@@ -121,7 +121,7 @@
 
     <h4>선호하는 배우</h4>
     <p>SQL query : SELECT * FROM movie_actor_list dl 
-        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>=4) ml ON dl.movie_id=ml.movie_id
         INNER JOIN actor_list gl ON gl.actor_id = dl.actor_id;</p>
     <hr>
     <?php
@@ -135,7 +135,7 @@
         </tr>";
 
         $sql5 = "SELECT * FROM movie_actor_list dl 
-        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>3.9) ml ON dl.movie_id=ml.movie_id
+        INNER JOIN (SELECT movie_id FROM user_rating_list WHERE userlist_id=".$session_id." AND star_rate>=4) ml ON dl.movie_id=ml.movie_id
         INNER JOIN actor_list gl ON gl.actor_id = dl.actor_id";
 
         $result_sql5 = mysqli_query($conn, $sql5);
@@ -150,7 +150,7 @@
         }
         echo "</table>";
     ?>
-    
+
         <br>
         <a href="../button.php"><button type="button" class="btn btn-primary">Go To Menu</button></a>
         <br>
