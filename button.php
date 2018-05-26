@@ -94,10 +94,10 @@
             </p>
 
             <p>
-                <a href="./KEY_project/hated_genre.php"> <button type="button" class="btn btn-default"> 18-3. 관심없어요 영화 장르별 보기 </button></a>
-                <a href="./KEY_project/search_movie_sql19.php"><button type="button" class="btn btn-default"> 19. 영화 검색 </button></a>
-                <a href="./KEY_project/search_user_sql20.php"><button type="button" class="btn btn-default"> 20. 유저 검색 </button></a>
-                <button type="button" class="btn btn-default"> 21. 미완성 </button> 
+                <a href="./KEY_project/hated_genre.php"> <button type="button" class="btn btn-default"> 18-3. 관심없는 영화 장르별 보기 </button></a>
+                <a href="./KEY_project/search_movie_sql19.php"><button type="button" class="btn btn-default"> SQL19 : 영화 검색 </button></a>
+                <a href="./KEY_project/search_user_sql20.php"><button type="button" class="btn btn-default"> SQL20 : 유저 검색 </button></a>
+                <a href="./KEY_project/users_preference_sql21.php"><button type="button" class="btn btn-default"> SQL21 : 선호하는 감독 / 장르 / 국가 / 배우 보기 </button></a> 
             </p>
 
             <p>
@@ -120,7 +120,7 @@
 
             
             <p>
-                <a href="./Admin/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지[고언약 제작중] </button></a>
+                <a href="./Admin/admin.php"><button type="button" class="btn btn-default"> 99. 관리자 페이지 </button></a>
             </p>
 
         </div>

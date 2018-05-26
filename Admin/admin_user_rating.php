@@ -11,15 +11,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
     <body>
-    <div class="container">
+    <div class="container"> <br>
+    <?php require('../db_connect.php');  ?>
         <h2>SQL Table</h2>
-        <p>영화 Revenue ASC 순으로 정렬
-        <br>
-        SELECT * FROM movie_list WHERE release_date > 2018;
+        <p> 
+        
         </p>
 
         <?php
-            require('../db_connect.php');
+            
             $sql = "SELECT 
             UL.user_name,
             MV.nation,
@@ -29,10 +29,7 @@
             WHERE movie_id=".$_GET['id'];
 
 
-            $result = mysqli_query($conn, "    ");
-
-
-
+            $result = mysqli_query($conn, $sql);
 
            echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
            # echo "<table class='table table-hover' >";
