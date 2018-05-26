@@ -1,9 +1,8 @@
 # DB project
 
-2018-1 Handong DB team project
+2018-1 Handong DB 'SQL' team project
 
-멋찐 Project결과물을 http://watcha.o-r.kr/dbproject/button.php 에서 확인할 수 있습니다.
+Kim Myung Chul Haram bae Ko Eonyak  Koh Eunsung
 
-
-
+Our project can be seen on the homepage. http://watcha.o-r.kr/dbproject/button.php 
 
