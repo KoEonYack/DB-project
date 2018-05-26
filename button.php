@@ -36,7 +36,7 @@
                 <?php
                     session_start();
                     if(!isset($_SESSION['ses_userid'])){
-                        echo '<a href="./MCK_project/member/main.php"><button type="button" class="btn btn-info"> 2-1. Login</button></a>';
+                        echo '<a href="./MCK_project/member/main.php"><button type="button" class="btn btn-info"> 2-1. Login (order by rand() limit 10)</button></a>';
                     }
                     else{
                         echo '<a href="./MCK_project/member/signOut.php"><button type="button" class="btn btn-info"> 2-2. Logout </button></a>';
