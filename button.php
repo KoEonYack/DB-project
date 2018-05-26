@@ -55,7 +55,7 @@
             <p>
                 <a href="KEY_project/Current_screening_sql5.php"><button type="button" class="btn btn-default"> 5. 현재 상영작 </button></a>    
                 <a href="KEY_project/Before_Release_sql6.php"><button type="button" class="btn btn-default"> 6. 개봉 예정작 </button></a>
-                <a href="KEY_project/movie_info.php"><button type="button" class="btn btn-default"> 7. 영화 기본 정보 보기 </button></a>
+                <a href="KEY_project/movie_info.php"><button type="button" class="btn btn-default"> 7. 영화 기본 정보 보기 (View) </button></a>
                 <a href="./HRB_project/director_info.php"> <button type="button" class="btn btn-default"> 8-1. 감독기본정보 </button></a>
                 <a href="./HRB_project/actor_info.php"><button type="button" class="btn btn-default">8-2. 배우기본정보</button></a>
                 <a href="./HRB_project/movie_rating.php"><button type="button" class="btn btn-default">9. 영화 평가하기</button></a>
@@ -76,6 +76,7 @@
             </p>
 
             <p>
+                <a href="./MCK_project/comment_like.php"><button type="button" class="btn btn-default"> 14. 댓글에 좋아요 누르기 </button></a>
                 <a href="./MCK_project/hopeToSee_movie.php"><button type="button" class="btn btn-default"> 15-1. 보고싶어요 체크하기 </button></a>
                 <a href="./MCK_project/hopeToSee_remove.php"><button type="button" class="btn btn-default"> 15-2. 보고싶어요 삭제하기 </button></a>
                 <a href="./MCK_project/wanted_movie.php"><button type="button" class="btn btn-default"> 16-1. 보고싶어요 영화 보기 </button></a>

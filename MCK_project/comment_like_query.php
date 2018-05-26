@@ -48,7 +48,7 @@
         }
     }
 
-    // 사용자가 영화를 클릭했을 때
+    // 사용자가 커맨트를 클릭했을 때
     function commentClick(){
       //id에 대해 GET으로 받은 변수가 존재할 때
         if(isset($_GET['comment_id'])){

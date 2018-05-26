@@ -45,10 +45,10 @@
                     <label for="username">아이디</label>
                     <div class="input-group">
                         <input type="text" name="memberId" class="form-control" id="username" placeholder="아이디를 입력해 주세요">
-                        <span class="input-group-btn">
+                        <!-- <span class="input-group-btn">
                             <button class="btn btn-success" onclick="window.open('memberIdCheck.php','window_name','width=430,height=500,location=no,status=no,scrollbars=yes');">중복 확인</button>
-                            <!-- <div class="memberIdComment comment"></div> -->
-                        </span>
+                            <div class="memberIdComment comment"></div>
+                        </span> -->
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@
 
                 <div class="form-group text-center">
                     <button type="submit" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
-                    <button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button>
+                    <!-- <button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button> -->
                 </div>
 
                 <div class="formCheck">

@@ -4,7 +4,7 @@
             
             global $conn;
                    
-            require('../db_connect.php');
+            # require('../db_connect.php');
             $sql = "INSERT INTO user_hate_list VALUES (".$_SESSION['userlist_id'].",".$_GET['id'].")";
             $result = mysqli_query($conn, $sql);
             
