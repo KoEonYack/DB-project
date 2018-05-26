@@ -46,26 +46,26 @@
             </p>
 
             <p>
-                <a href="./HRB_project/rank/spectator_rank.php"><button type="button" class="btn btn-default"> 4-1. 관람객 많은 순으로 보기 </button></a>
-                <a href="./HRB_project/rank/reserve_rank.php"><button type="button" class="btn btn-default"> 4-2. 예매율 높은 순으로 보기 </button></a>
-                <a href="./HRB_project/rank/star_rank.php"><button type="button" class="btn btn-default"> 4-3. 별점평균 높은 순으로 보기 </button></a>
-                <a href="./HRB_project/rank/comment_rank.php"><button type="button" class="btn btn-default"> 4-4. 댓글 수 많은 순으로 보기 </button></a>
+                <a href="./HRB_project/rank/spectator_rank.php"><button type="button" class="btn btn-default"> 4-1. 관람객 많은 순으로 보기(ORDER BY) </button></a>
+                <a href="./HRB_project/rank/reserve_rank.php"><button type="button" class="btn btn-default"> 4-2. 예매율 높은 순으로 보기(ORDER BY) </button></a>
+                <a href="./HRB_project/rank/star_rank.php"><button type="button" class="btn btn-default"> 4-3. 별점평균 높은 순으로 보기(INNER JOIN, GROUP BY, ORDER BY) </button></a>
+                <a href="./HRB_project/rank/comment_rank.php"><button type="button" class="btn btn-default"> 4-4. 댓글 수 많은 순으로 보기(VIEW, TRANSACTION) </button></a>
             </p>
     
             <p>
                 <a href="KEY_project/Current_screening_sql5.php"><button type="button" class="btn btn-default"> 5. 현재 상영작 </button></a>    
                 <a href="KEY_project/Before_Release_sql6.php"><button type="button" class="btn btn-default"> 6. 개봉 예정작 </button></a>
                 <a href="KEY_project/movie_info.php"><button type="button" class="btn btn-default"> 7. 영화 기본 정보 보기 (View) </button></a>
-                <a href="./HRB_project/director_info.php"> <button type="button" class="btn btn-default"> 8-1. 감독기본정보 </button></a>
-                <a href="./HRB_project/actor_info.php"><button type="button" class="btn btn-default">8-2. 배우기본정보</button></a>
-                <a href="./HRB_project/movie_rating.php"><button type="button" class="btn btn-default">9. 영화 평가하기</button></a>
+                <a href="./HRB_project/director_info.php"> <button type="button" class="btn btn-default"> 8-1. 감독기본정보(LEFT JOIN) </button></a>
+                <a href="./HRB_project/actor_info.php"><button type="button" class="btn btn-default">8-2. 배우기본정보(INNER JOIN)</button></a>
+                <a href="./HRB_project/movie_rating.php"><button type="button" class="btn btn-default">9. 영화 평가하기(EXISTS)</button></a>
 
             </p>
 
             <p>
                 <a href="./HRB_project/movie_saw.php"><button type="button" class="btn btn-default"> 10-1. 이제까지 본 영화 </button></a>
-                <a href="./HRB_project/movie_nation.php"><button type="button" class="btn btn-default">10-2. 국가별로 보기</button></a>
-                <a href="./HRB_project/movie_genre.php"><button type="button" class="btn btn-default">10-3. 장르별로 보기</button></a>
+                <a href="./HRB_project/movie_nation.php"><button type="button" class="btn btn-default">10-2. 국가별로 보기(DISTINCT, INNER JOIN)</button></a>
+                <a href="./HRB_project/movie_genre.php"><button type="button" class="btn btn-default">10-3. 장르별로 보기(INNER JOIN)</button></a>
             </p>
 
             <p>
@@ -102,9 +102,9 @@
             </p>
 
             <p>
-                <a href="./HRB_project/best_comment.php"><button type="button" class="btn btn-default"> 22. 최고 코멘트와 받은 좋아요 수 </button></a>
-                <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간 </button></a>
-                <a href="./HRB_project/star_info.php"><button type="button" class="btn btn-default"> 24. 별점 평균과 가장 많이 준 별점 </button></a>
+                <a href="./HRB_project/best_comment.php"><button type="button" class="btn btn-default"> 22. 최고 코멘트와 받은 좋아요 수(INNER JOIN , MAX, COUNT, GROUP BY) </button></a>
+                <a href="./HRB_project/movie_time.php"><button type="button" class="btn btn-default"> 23. 영화 본 총 시간(SUM, LEFT JOIN) </button></a>
+                <a href="./HRB_project/star_info.php"><button type="button" class="btn btn-default"> 24. 별점 평균과 가장 많이 준 별점(COUNT, ORDER BY, GROUP BY) </button></a>
                 <a href="./ESK_project/user_prefrence_tag.php"><button type="button" class="btn btn-default"> 25. 선호 태그 조회 </button></a>
             </p>
             <p>
