@@ -69,6 +69,7 @@
         <br><a href="./admin_revASC.php"><button type="button" class="btn btn-primary">영화 수익 낮은 순으로 보기</button></a>
         <a href="./admin_revDESC.php"><button type="button" class="btn btn-primary">영화 수익 높은 순으로 보기</button></a>
         <a href="./admin_user_rating.php"><button type="button" class="btn btn-primary">사용자가 별점을 준 리스트</button></a>
+        <a href="./admin_addActor.php"><button type="button" class="btn btn-primary">영화에 배우 추가하기</button></a>
         
         <br><br><br><br><br>
         <a href="../button.php"><button type="button" class="btn btn-success">Go To Index Page</button></a>
