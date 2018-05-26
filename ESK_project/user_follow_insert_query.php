@@ -41,9 +41,6 @@
         $n++;
         if($n%5===0) echo '</p><p>';
       }
-      // if(isset($_POST['name']) && isset($_POST['point'])){
-      //   echo '<h4>'.$_POST['name'].'을 '.$_POST['point'].'점으로 평가하셨습니다!</h4>';
-      // }
   }
 
   // 사용자가 팔로우하고 싶은 사용자를 클릭했을 때
@@ -55,41 +52,32 @@
       $user_id = $_SESSION['userlist_id'];
 
 
-      $sql = "INSERT INTO follower_list (`userlist_id`,`follower_id`) VALUES(".$user_id.",".$_GET['following_id'].")";
+      $sql = "INSERT INTO follower_list (`follower_id`,`userlist_id`) VALUES(".$user_id.",".$_GET['following_id'].")";
       echo ' : '.$sql.'<p>';
       $result = mysqli_query($conn,$sql);
 
-      $user_sql = "SELECT * FROM follower_list WHERE userlist_id={$user_id}";
+      echo '<br><br><br>';
+      $user_sql = "SELECT * FROM `follower_list` F INNER JOIN `user_list` U on F.`userlist_id` = U.`userlist_id` WHERE F.`follower_id`={$user_id}";
       echo '<br><h2>'.$user_name. ' 유저의 following list 입니다. </h2><p>';
       echo '<h4>'.$user_sql.'</h1>';
       $user_result = mysqli_query($conn, $user_sql);
       echo '<div class="list-group" style="display:inline-block;">';
-
       while($user = mysqli_fetch_array($user_result)){
-        $following_sql = "SELECT * FROM user_list WHERE userlist_id={$user['follower_id']};";
-        $following_result = mysqli_query($conn, $following_sql);
-        $following = mysqli_fetch_array($following_result);
-
         echo ' ' 
-        .$following["nick_name"]. ' ';
+        .$user["nick_name"]. ' ';
       }
-
-      echo ' </div> <br> <p></p>' ;
-      $user_sql = "SELECT * FROM follower_list WHERE follower_id={$user_id}";
+      echo '</div>';
+      echo '<br><br><br>';
+      $user_sql = "SELECT * FROM `follower_list` F INNER JOIN `user_list` U on F.`follower_id` = U.`userlist_id` WHERE F.`userlist_id`={$user_id}";
       echo '<br><h2>'.$user_name. ' 유저의 follower list 입니다. </h2><p>';
       echo '<h4>'.$user_sql.'</h1>';
       $user_result = mysqli_query($conn, $user_sql);
       echo '<div class="list-group" style="display:inline-block;">';
       while($user = mysqli_fetch_array($user_result)){
-        $follower_sql = "SELECT * FROM user_list WHERE userlist_id={$user['userlist_id']};";
-        $follower_result = mysqli_query($conn, $follower_sql);
-        $follower = mysqli_fetch_array($follower_result);
-
         echo ' ' 
-        .$follower["nick_name"]. ' ';
+        .$user["nick_name"]. ' ';
       }
-      echo ' </div>' ;
-
+      echo '</div>';
     }
   }
 
