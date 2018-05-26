@@ -79,10 +79,10 @@
         <p>
             <a href="../MCK_project/makeMovie_DECREASEINDEX.php"><button type="button" class="btn btn-primary"> Decreasing order INDEX를 movie_list에 적용하기 (VIEW)</button></a>
             <a href="../MCK_project/updateUserPassWord.php"><button type="button" class="btn btn-primary"> 미소지기님의 비밀번호를 '명철123'으로 변경하기 (UPDATE)</button></a>
-            <a href="./admin_addActor.php"><button type="button" class="btn btn-primary">영화에 배우 추가하기(TRANSACTION)</button></a>
         </p>
 
         <p>
+            <a href="./admin_addActor.php"><button type="button" class="btn btn-primary">영화에 배우 추가하기(TRANSACTION)</button></a>
             <a href="./admin_loginlog.php"><button type="button" class="btn btn-primary">유저의 회원가입 로그확인(TRIGGER)</button></a>
         </p>
         
