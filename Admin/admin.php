@@ -17,8 +17,12 @@
         <?php require('../db_connect.php'); ?>
 
         <br><br>
-            <h2>관리자 페이지</h2>
-            <p>관리자는 본 페이지에서 통계를 볼 수 있습니다.</p>
+            <h2>관리자 페이지
+            <a href="../button.php"><button type="button" class="btn btn-success">Go To Main</button></a>
+            
+            </h2>
+            <p>관리자는 본 페이지에서 통계를 볼 수 있습니다.
+            </p>
         <hr>
         <?php
             echo "<br>";
@@ -67,7 +71,8 @@
 
         <br>
         <h4> 더 자세한 관리 보기 </h4>
-        <p> 관리자는 다음과 같은 다양한 관리를 할 수 있다.</p>
+        <p> 관리자는 다음과 같은 다양한 관리를 할 수 있다.
+        </p>
         <hr>
         <br>
         <p>
@@ -87,8 +92,6 @@
             <a href="./admin_loginlog.php"><button type="button" class="btn btn-primary">유저의 로그인 로그확인</button></a>
         </p>
         
-        <br><br><br><br><br>
-        <a href="../button.php"><button type="button" class="btn btn-success">Go To Index Page</button></a>
         </div>
     </body>
 </html>
