@@ -150,7 +150,8 @@
         }
         echo "</table>";
     ?>
-
+    
+        <br>
         <a href="../button.php"><button type="button" class="btn btn-primary">Go To Menu</button></a>
         <br>
 

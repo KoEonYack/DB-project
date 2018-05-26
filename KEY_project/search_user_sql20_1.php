@@ -12,6 +12,11 @@
 </head>
     <body>
         <div class="container"><br><br>
+        <?php require('../db_connect.php'); ?>
+        <br>
+        <h2>SQL Senario</h2>
+        <p>SQL : SELECT * FROM user_list WHERE user_name LIKE %.$user.%; </p>
+        <hr>
             <?php 
                 $user = $_POST['username'];
                 $flag = 0;
@@ -20,7 +25,7 @@
                 $session_id = $_SESSION['userlist_id'];
                 # echo $session_id;
 
-                require('../db_connect.php');
+                
                 $result = mysqli_query($conn, "SELECT * FROM user_list WHERE user_name LIKE \"%".$user."%\"");
             
                echo "<table width='100%' class='table table-striped table-bordered table-hover' id='dataTables-example' >";
@@ -50,9 +55,9 @@
                             $flag = 1;
                         }
                         else if(  $row["open_range"] == "followers" ){
-                            echo "here";
-                            echo $session_id;
-                            echo $_SESSION['userlist_id'];
+
+                            #echo $session_id;
+                            #echo $_SESSION['userlist_id'];
                             // 로그인한 ID = 팔로우 ID follower_id
 
                             
