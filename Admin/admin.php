@@ -25,7 +25,7 @@
             $result = mysqli_query($conn, $comment_count_query);
             $row = mysqli_fetch_array($result);
             $content = $row["user_counter"];
-            echo "회원 가입한 수 : ".$content;
+            echo "회원 가입한 수(명) : ".$content;
 
             echo "<br>";
 
@@ -33,7 +33,7 @@
             $result = mysqli_query($conn, $movie_count_query);
             $row = mysqli_fetch_array($result);
             $content = $row["movie_counter"];
-            echo "DB에 저장된 영화 수 : ".$content;
+            echo "DB에 저장된 영화 수(편) : ".$content;
             
             echo "<br>";
 
@@ -41,7 +41,7 @@
             $result = mysqli_query($conn, $movie_count_query);
             $row = mysqli_fetch_array($result);
             $content = $row["movie_rev"];
-            echo "평균 영화 수익(10,000$): ".$content;
+            echo "평균 영화 수익(\$달러): ".$content;
 
             echo "<br>";
 

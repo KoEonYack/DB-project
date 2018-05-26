@@ -31,10 +31,11 @@
 
                 echo "<p>";
                 require('./select_movie_hate_quary_sql17.php');
-                $sql = "SELECT * FROM movie_list 
-                WHERE `movie_id` 
-                NOT IN (SELECT `movie_id` FROM user_hate_list WHERE `userlist_id` = $user_id)";
-                $movie_result = mysqli_query($conn, $sql);
+                
+                $sql1 = "SELECT * FROM movie_list WHERE movie_id
+                NOT IN (SELECT movie_id FROM user_hate_list WHERE userlist_id = ".$_SESSION['userlist_id'].")";
+    
+                $movie_result = mysqli_query($conn, $sql1);
                 $n = 0;
                 while($movie = mysqli_fetch_array($movie_result)){
                     # $cp_movie_id = $movie["movie_id"];
